@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style type="text/css">
+body {
+	background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+a{
+	color: #FFF;
+}
+
+h1{
+	text-align:center;
+	color:rgb(216, 238, 23);
+	font-weight:bold;
+}
+
+#contenedor{
+	background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+	width:500px;
+	height:400px;
+	margin:auto;
+	
+}
+</style>
+<script src="Jquery/jquery-1.6.3.min.js"></script>
+
+<script>
+
+$(document).ready(function(e){
+
+	$("#pulsar").click(function(e){
+
+		e.preventDefault();	//Se cancela el anterior evento que no carga nada en el espacio
+
+		$("#externo").attr("src","https://uigradients.com/"); //En el src de la etiqueta se llenara con la web escrita en esta linea
+
+	});
+
+});
+
+</script>
+</head>
+
+<body>
+<h1> Píldoras informáticas</h1>
+<a href="" id="pulsar">Pulsa</a>
+<div id="contenedor">
+	<iframe src="" width="500" height="400" id="externo" frameborder="0">
+	</iframe>
+</div>
+
+</body>
+</html>

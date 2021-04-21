@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Nada</title>
+
+<script>
+    
+    var repetir="si";
+
+    function suma(num1, num2){
+        alert("La suma es: " + (num1+num2));
+    }
+    function resta(num1, num2){
+        alert("La resta es: " + (num1-num2));
+    }
+    function multiplica(num1, num2){
+        alert("La multiplicaciòn es: " + (num1*num2));
+    }
+    function divide(num1, num2){
+        alert("La división es: " + (num1/num2));
+    }
+
+    do{
+
+        var operacion=prompt("Que operación desea realizar?");
+        var operador1=parseInt(prompt("Introduce el primer númeror?"));
+        var operador2=parseInt(prompt("Introduce el segundo númeror?"));
+
+        if (operacion=="sumar"){
+            suma (operador1, operador2);
+        }
+        else if(operacion=="restar"){
+            resta (operador1, operador2);
+        }
+
+        else if(operacion=="multiplicar"){
+            multiplica (operador1, operador2);
+        }
+
+        else if(operacion=="dividir"){
+            divide (operador1, operador2);
+        }
+        else{
+            alert("Lo siento, operación no contemplada");
+        }
+        repetir=prompt("¿Deseas repetir?");
+
+    }while(repetir=="si");
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

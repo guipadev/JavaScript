@@ -1,0 +1,202 @@
+1. algoritmo que lea un número e indique si este es positivo o negativo
+
+var numero= Number(prompt('Ingrese un número'));
+var numeroObtenido = numero == 0 ? 'Neutro' : numero < 0 ? 'Negativo': numero > 0 ? 'Positivo' : 'Ingrese un numero';
+console.log(numeroObtenido)
+
+2. algoritmo que lea un número e indique si este es par o impar
+
+var numero= Number(prompt('Ingrese un número'));
+
+var numeroObtenido = numero === 0 ? 'Neutro' : numero%3===1 ? 'Numero Impar' : numero %2 === 0 ? 'Numero Par' : 'Ingrese un numero';
+
+console.log(numeroObtenido)
+
+3. algoritmo que lea un número e indique si este es par-positivo, par-negativo, impar positivo 
+
+var numero= Number(prompt('Ingrese un número'));
+
+var numeroObtenido = 
+	numero === 0 ? 'Neutro' 
+	: numero%3===1 ? 'Numero Impar Positivo' 
+	: numero %2 === 0 ? 'Numero Par Positivo'
+	: 'Ingrese un numero';
+
+console.log(numeroObtenido)
+
+4. algoritmo que lea un número y si este es mayor o igual a 10 devuelva el triple de este de lo contrario la cuarta parte de este.
+
+var numero = Number(prompt('Ingrese un número'));
+
+
+if(numero>=10){
+
+   resultado = numero * 3;
+
+}else if(numero<10){
+
+  resultado = numero / 4;
+
+}else{
+
+  resultado = "Ingrese por favor un número"
+
+}
+
+
+
+console.log(resultado)
+
+5.Obtener el iva de una venta, si esta es superior a $ 150.000 aplicar un descuento del 25 %
+
+var numero = Number(prompt('Ingrese valor de la venta'));
+
+function descuento(venta){
+    if (venta>150000){
+       return venta - (venta*0.25)
+   }else{
+     return venta 
+   }
+}
+
+console.log(descuento(numero))
+
+6. Leer tres números e imprimir el mayor de ellos
+
+var n1 = Number(prompt('Ingrese primer numero'));
+
+var n2 = Number(prompt('Ingrese segundo numero'));
+
+var n3 = Number(prompt('Ingrese tercer numero'));
+
+
+
+if (n1 > n2) {
+
+            if (n1 > n3) {
+
+                console.log("El mayor es: " + n1); 
+            } else {
+
+                console.log("el mayor es: " + n3);
+     
+      }
+} else if (n2 > n3) {
+
+            console.log("el mayor es: " + n2);
+
+        } else {
+
+            console.log("el mayor es: " + n3);
+
+        }
+
+7. algoritmo que permita resolver una ecuación de segundo grado. Con discriminante
+mayor a cero
+
+var a = Number(prompt('Ingrese valor a: '));
+
+var b = Number(prompt('Ingrese valor b: '))
+;
+var c = Number(prompt('Ingrese valor c: '));
+
+var discriminante = b ** 2 - 4 * a * c;
+
+if (discriminante < 0){
+
+    console.log( 'La ecuacion no tiene soluciones reales')
+
+}else if(discriminante == 0){
+
+    x = -b / (2 * a);
+
+    console.log('La solucion unica es x =' + x)
+
+}else{
+
+    x1 = (-b - (discriminante ** 0.5)) / (2 * a);
+
+    x2 = (-b + (discriminante ** 0.5)) / (2 * a);
+
+    console.log('Las dos soluciones reales son:');
+
+    console.log('x1 =' + x1);
+
+    console.log('x2 =' + x2)
+
+}
+
+8. Determine el valor de un pasaje en avión , conociendo la distancia a recorrer, el número de días de
+estancia, y sabiendo que si la distancia a recorrer es superior a 1000 Km y el número de días de
+estancia es superior a 7, la línea aérea le hace un descuento del 30%.
+
+var valorKilometro = 15000;
+
+var valorEstancia = 100000;
+
+
+
+var kilometros = Number(prompt('Cantidad de km de recorrdio'));
+
+var dias = Number(prompt('Cantidad días a hospedarse'));
+
+
+
+var costoVuelo = valorKilometro * kilometros;
+
+var costoHospedaje = valorEstancia * dias;
+
+
+
+function descuento(kilometros, dias){
+
+     if(kilometros > 1000 && dias > 7){
+
+          return (costoVuelo- (costoVuelo*0.30))+(costoHospedaje - (costoHospedaje*0.30))
+
+     }else{
+
+         return costoVuelo + costoHospedaje;
+
+    }
+
+}
+
+
+console.log('El costo a pagar por su viaje es' +  descuento(kilometros, dias))
+
+9. debes restar dos números pero sin usar una resta. Los números para este ejercicio son 5 y debes quitarle 1.
+Busca la forma de hacer tu respuesta sea 4 sin usar una resta suerte 
+
+var numberOne = Number(prompt('Ingrese primer valor: '));
+
+
+var numberTwo = Number(prompt('Ingrese valor a quitar: '))
+;
+
+
+
+for (resultado = 0; numberTwo < numberOne; resultado++){
+ numberTwo++;
+}
+
+console.log('la diferencia es: '+resultado)
+
+//OTRA FORMA
+
+let num1 = 5, num2=4, res=0;
+while(num2 < num1){
+     num2 = num2 + 1;
+     res += 1;
+}
+console.log(`la resta de los numeros es: ${res}`);
+
+//FORMA MAS REDUCIDA
+let mayor = 5, menor = 4, res=0;
+
+for(; menor < mayor; menor++)res++
+console.log(`El resultado es: ${res}`)
+
+El ejercicio trata de : crear una función que reciba un texto y este texto lo convierta en un array donde casa palabra esté separada por una coma.
+Ejemplo : "hola Mundo como estas"
+Resultado : ["hola", "mundo", "como", "estas"]

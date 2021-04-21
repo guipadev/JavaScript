@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Hola Mundo!</title>
+</head>
+
+<body>
+    <script>
+        /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Crear un codigo que ejecute un objeto llamado luisito que acaba de nacer,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ahora debe calucar que la altura tiene luisito cuando tenga 18 a�os de vida,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                tambien determinar su peso cuando tenga dicha edad
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Teniendo en cuenta lo siguiente:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Cada a�o luisito tiene una probabilidad de aumentar de peso del 80% y su aumento es de 6 kilos
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Cada a�o luisito tiene una probabilidad de bajar de perso del 20% y su disminucion es de 2 kilos
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                cada a�o luisito tiene probabilidad de aumentar de altura del 70% y su aumento de altura es de 10cm
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+        var luisito = {
+            nombre: "Luisito",
+            apellido: "Gomez",
+            peso: 0,
+            altura: 0
+        }
+
+        const AUMENTO_PESO = 6
+        const PERDIDA_PESO = 2
+        const ALTURA = 10
+
+        const AUMENTA_PESO = (persona) => persona.peso += AUMENTO_PESO
+        const PERDER_PESO = (persona) => persona.peso -= PERDIDA_PESO
+        const AUMENTO_ALTURA = (persona) => persona.altura += ALTURA
+
+        for (var i = 0; i < 18; i++) {
+            var aleatorio = Math.random()
+            if (aleatorio > 0.2) {
+                AUMENTA_PESO(luisito)
+            } else if (aleatorio < 0.2) {
+                PERDER_PESO(luisito)
+            }
+            if (aleatorio > 0.1) {
+                AUMENTO_ALTURA(luisito)
+            }
+        }
+
+        function calcularIMC(estatura, peso) {
+            var alturaEnCentimetros = estatura;
+            var alturaEnMetros = alturaEnCentimetros / 100;
+            var pesoEnKilos = peso;
+            var imc = Math.round(pesoEnKilos / (alturaEnMetros * alturaEnMetros));
+
+            if (imc < 18.5) {
+                return 'Peso insuficiente';
+            } else if (imc = 18.5 && imc < 24.9) {
+                return 'Normopeso';
+            } else if (imc = 25 && imc < 26.9) {
+                return 'Sobrepeso grado I';
+            } else if (imc = 27 && imc < 29.9) {
+                return 'preobesidad';
+            } else if (imc = 30 && imc < 34.9) {
+                return 'Obesidad de tipo I';
+            } else if (imc = 35 && imc < 39.9) {
+                return 'Obesidad de tipo II';
+            } else if (imc = 40 && imc < 49.9) {
+                return 'm�rbida';
+            } else if (imc > 50) {
+                return 'extrema';
+            } else {
+                return "Debes ingresar peso y altura.";
+            }
+        }
+
+        //EJERCICIO INCLUIR LA ESTATURA INDICAR CUANTOS METROS SON EJEMPLO 1.80 MTS
+        //SI TIENE MAS DE 70 KG REALIZAR QUE INFORME QUE ESTA DE SOBRE PESO E INDICAR QUE DEBE BAJA
+
+        console.log(`Hola ${luisito.nombre} ${luisito.apellido} te cuento que ya tienes 18 a�os y tu altura es: ${luisito.altura} cm y tu peso es: ${luisito.peso} Kg, por lo cual tu estado es de ` + calcularIMC(luisito.altura, luisito.peso))
+
+
+        /*
+        Determinar cuantos dias el profesor David gana o pierde su dineo, este pose un atributo dinero qu e empieza en 1.500 dolares
+
+        la probabilidad de que david gane dinero es del 47% equivalente diariamente a 15 dolares
+        la probabilidad de que david pierda dinero es del 53% equivale diariamente a 13 dolares
+        Determinar si david perdio su dinero cuando es igual o inferior a 1.000 y que gano si el dinero es igual o mayor a 2.000 dolares
+        */
+
+        let david = {
+            nombre: "David",
+            apellidos: "Torres",
+            edad: 26,
+            dinero: 1500
+        }
+
+        const AUMENTO_DINERO = 15
+        const PERDIDAD_DINERO = 13
+        let dias = 0
+
+        const POSITIVO = () => Math.random() <= 0.47
+        const NEGATIVO = () => Math.random() > 0.47
+
+        const GANAR_DINERO = (persona) => persona.dinero += AUMENTO_DINERO
+        const PERDER_DINERO = (persona) => persona.dinero -= PERDIDAD_DINERO
+
+        while (david.dinero >= 1000 & david.dinero <= 2000) {
+            if (POSITIVO()) {
+                GANAR_DINERO(david)
+            }
+            if (NEGATIVO()) {
+                PERDER_DINERO(david)
+            }
+            dias++
+        }
+
+        function Resultado(X) {
+            if (X = POSITIVO) {
+                return 'Ganaste';
+            } else if (X = NEGATIVO) {
+                return 'Perdiste';
+            } else {
+                return 'Mantuviste';
+            }
+        }
+
+        console.log(`Hola ${david.nombre} ${david.apellidos} acabas de GANAR o PERDER tu dinero, tu saldo es ${david.dinero} y esto paso en ${dias} dias`)
+
+        //EJERCICIO DETERMINAR MENSAJE SI GANO O PERDIO DE ACUERDO A CONDIONES EXPLICADAS ANTERIORMENTE?
+        console.log(Resultado(david.dinero))
+    </script>
+</body>
+
+</html>
+
+</html>
+
+</html>

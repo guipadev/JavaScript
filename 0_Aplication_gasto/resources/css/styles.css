@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.formField {
+    background-color: rgba(128, 128, 128, 0.307);
+    padding: 15px;
+}
+
+#botonDeEnvio {
+    font-size: 25px;
+    background-color: mediumaquamarine;
+}
+
+td,
+th {
+    border: solid rgba(176, 151, 11, 0.518) 1px;
+    padding: 15px;
+    text-align: center;
+}
+
+.tableFormat table {
+    margin: 10px auto;
+}

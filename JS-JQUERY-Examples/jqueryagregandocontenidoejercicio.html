@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="Jquery/jquery-3.4.1.js"></script>
+
+<style>
+    .micontenedor{
+        background-color: chartreuse;
+    }
+
+</style>
+
+<script>
+    function validar(){
+        var n_usuario=document.getElementById("usuario").value; //guarda en la variable n_usuairo el valor ingresado en el id usuario del formulario de la web
+            if(n_usuario==""){
+                $("#usuario").after("Rellena este campo, por favor");
+            }
+    }
+</script>
+
+</head>
+<body>
+    <form action="" method="get">
+        <input name="" type="text"id="usuario"><br/>
+        <input name="" type="text"id="nombre"><br/>
+        <input name="" type="text"id="apellido"><br/>
+        <input type="button" value="Dale" onclick="validar()">
+    </form>
+</body>
+</html>

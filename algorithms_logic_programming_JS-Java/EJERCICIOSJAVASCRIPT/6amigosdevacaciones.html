@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <script>
+        /* 
+       Seis amigos desean pasar sus vacaciones juntos y deciden, cada dos, utilizar diferentes medios de transporte; sabemos que Alejandro no utiliza el coche ya que éste acompaña a Benito que no va en avión. Andres viaja en avión. Si Carlos no va acompañado  de Darío, ni hace uso del avión, podria Vd. decirnos en que medio de transporte llega a su destino Tomás.
+
+        Tren: Alejandro y Benito
+        Avion: Andres y Dario
+        Carro: Carlos y Tomas       
+       */
+
+       var Transporte = {
+           Alejandro: {Tren:true, Avion: false, Carro: false},
+           Benito: {Tren:true, Avion: false, Carro: false},
+           Andres: {Tren:false, Avion: true, Carro: false},
+           Dario: {Tren:false, Avion: true, Carro: false},
+           Carlos: {Tren:false, Avion: false, Carro: true},
+           Tomas: {Tren:false, Avion: false, Carro: true},
+       }
+
+       resultado: function(){
+           if (
+               Transporte.Alejandro.Tren == true &&
+               Transporte.Benito.Tren == true &&
+               Transporte.Andres.Avion == true &&
+               Transporte.Dario.Avion == true &&
+               Transporte.Carlos.Carro == true &&
+               Transporte.Tomas.Carro == true &&
+           ){
+               return true;
+           }
+           return false;
+
+       }
+
+       console.log("Tomas viajo en: ", Transporte.Tomas);
+
+    
+    </script>
+    </body>
+</html>

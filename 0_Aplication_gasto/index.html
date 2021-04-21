@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi economia</title>
+    <link rel="stylesheet" href="resources/css/styles.css">
+</head>
+
+<body>
+    <h1>Mi APlicación para gastos</h1>
+    <form id="transactionForm">
+        <div class="formField">
+            Tipo de Transacción
+            <input id="ingreso" type="radio" name="transactionType" value="Ingreso">
+            <label for="ingreso">Ingreso</label>
+            <input id="egreso" type="radio" name="transactionType" value="Egreso">
+            <label for="egreso">Egreso</label>
+        </div>
+        <div class="formField">
+            <label for="transactionDescription">Descripción</label>
+            <input id="transactionDescription" name="transactionDescription">
+        </div>
+        <div class="formField">
+            <label for="transactionAmount" type="number">Monto</label>
+            <input id="transactionAmount" name="transactionAmount" type="number">
+        </div>
+        <div class="formField">
+            <label for="transactionCategory">Categoria</label>
+            <input id="transactionCategory" name="transactionCategory">
+        </div>
+        <div class="formField">
+            <button id="botonDeEnvio">Añadir</button>
+        </div>
+    </form>
+    <div class="tableFormat">
+        <table id="transactionTable">
+            <tr>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Monto</th>
+                <th>Categoria</th>
+                <th>Eliminar</th>
+            </tr>
+        </table>
+    </div>
+    <script src="resources/js/scripts.js"></script>
+</body>
+
+</html>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hola Mundo</h1>
+
+    <button onclick='saludar("Yamid", "Ortiz")'>Saludar a Yamid</button>
+    <button onclick='saludar("Nataly", "Lozada")'>Saludar a Naty</button>
+    <button onclick='saludar("Ana", "Fonseca")'>Saludar a Ana</button>
+
+    <div style="margin: 20px;" id="esteDivSeLlamaNata">
+        Hola,aqui saludare al usuario
+    </div>
+
+    <script>
+        //Si es las 7Hs <= 13Hs decir "Buenos dias"
+        //Si es las 13Hs <= 19Hs decir "Buenas tardes"
+        //Si es las 19Hs <= 7Hs decir "Buenas noches"
+        function saludar(nombre, apellido) {
+            var fechaYHoraActual = new Date();
+            var horaActual = fechaYHoraActual.getHours();
+            var firstPartMessage = "";
+
+            if (horaActual > 7 && horaActual <= 13) {
+                firstPartMessage = "Buenos dias";
+            }
+
+            if (horaActual > 13 && horaActual < 19) {
+                firstPartMessage = "Buenas tardes";
+            }
+
+            if (horaActual > 0 && horaActual <= 7) {
+                firstPartMessage = "Buenas noches";
+            }
+
+            //console.log(horaActual)
+
+            console.log(`${firstPartMessage} ${nombre} ${apellido}`);
+
+            var divSaludar = document.getElementById("esteDivSeLlamaNata");
+            divSaludar.innerText = `${firstPartMessage} ${nombre} ${apellido}`;
+        }
+
+        /*
+                saludar("Damian", "Sire")
+                saludar("Jose", "TorresCamilo")
+                saludar("Damian", "Rojas")
+    */
+    </script>
+</body>
+
+</html>

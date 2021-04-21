@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <script>
+        /* Caso los cuatro atletas
+        De cuatro corredores de atletismo se sabe que C ha llegado inmediatamente detrás de B, y D ha llegado en medio de  A y C. ¿Podria usted calcular el orden de llegada?
+
+        B->1
+        C->2
+        D->3
+        A->4
+        */
+
+    var atleta = {
+        A:0,
+        B:0,
+        C:0,
+        D:0,
+        
+        resultado: function() {
+
+            if (atleta.B < atleta.C &&
+                atleta.C > atleta.B &&
+                atleta.D > atleta.C &&
+                atleta.A > atleta.D){
+
+                    return true;
+
+                    }
+            return false;
+
+        },
+
+        intevalo: setInterval(function(){
+
+            atleta.A = Math.ceil(Math.random()*4)
+            atleta.B = Math.ceil(Math.random()*4)
+            atleta.C = Math.ceil(Math.random()*4)
+            atleta.D = Math.ceil(Math.random()*4)
+
+            if(atleta.resultado()){
+
+                clearInterval(atleta.intevalo);
+                console.log("atleta A", atleta.A);
+                console.log("atleta B", atleta.B);
+                console.log("atleta C", atleta.C);
+                console.log("atleta D", atleta.D);
+            }
+
+        }, 10)
+    }
+
+    </script>
+    </body>
+</html>

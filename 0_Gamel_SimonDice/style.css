@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F3904F;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3B4371, #F3904F);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3B4371, #F3904F);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.tablero {
+    width: 50vh;
+    height: 50vh;
+    background-color: pink;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden; //lo que se desborde se  oculte
+}
+
+.posicion {
+    width: 25vh;
+    height: 25vh;
+}
+
+.amarillo {
+    background: #f9ca24;
+}
+
+.azul {
+    background: #1e3799;
+}
+
+.rojo {
+    background: #eb4d4b;
+}
+
+.verde {
+    background: #6ab04c;
+}
+
+.amarillo.tenue {
+    background: rgb(233, 214, 152);
+}
+
+.azul.tenue {
+    background: rgba(66, 66, 213, 0.68);
+}
+
+.rojo.tenue {
+    background: rgba(221, 111, 111, 0.537);
+}
+
+.verde.tenue {
+    background: rgba(119, 231, 119, 0.633);
+}
+
+.btn-inicio {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: #222f3e;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    top: calc(50% - 25px);
+    left: calc(50% - 75px);
+}
+
+.ocultar {
+    display: none;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Doc sin titulo</title>
+
+<script>    
+
+var Trabajadores=new Array();   //forma de declarar un Array indeterminable
+
+var persona="";
+
+var contador=0;
+
+while(persona!="salir"){    
+    
+    persona=prompt("Introduce trabajar");
+    
+    Trabajadores[contador]=persona;
+    
+    contador++;
+}
+
+Trabajadores.pop();
+
+for(var i=0;i<Trabajadores.length;i++){
+
+    document.write(Trabajadores[i] + "<br/>");
+}
+
+</script>
+
+</head>
+<body>
+</body>
+</html>

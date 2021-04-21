@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <script>
+        /* 
+        El caballo de Mac es más oscuro que de Smith, pero más rápido y mas viejo que el de Jack, que es aún más lento que el de Willy, que es más joven que el de Mac, que es más viejo que el de Smith, que es más claro que el de Willy, aunque el de Jack es más lento y más oscuro que el de Smith. 
+        ¿ Cúal es el más viejo ?    Mac
+        ¿ Cúal es el más lento ?    Jack
+        ¿ Cúal es el más claro ?    Smith
+
+        Propietario | Edad      | Velocidad         | Tono       
+        Mac         | 9         | 100               | 4
+        Smith       | 6         | 85                | 0
+        Jack        | 8         | 80                | 1
+        Willy       | 7         | 90                | 3                     
+        */
+
+    var Caballo = {
+        //Creamos propiedades tipo objeto
+        Mac: {Edad:0, Velocidad:0, Tono:0},
+        Smith:{Edad:0, Velocidad:0, Tono:0},
+        Jack: {Edad:0, Velocidad:0, Tono:0},
+        Willy:{Edad:0, Velocidad:0, Tono:0},
+        resultado: function(){
+            
+            if (
+                Caballo.Mac.Tono > Caballo.Smith.Tono &&
+                Caballo.Mac.Velocidad > Caballo.Jack.Velocidad &&
+                Caballo.Mac.Edad > Caballo.Jack.Edad &&
+                Caballo.Willy.Velocidad > Caballo.Jack.Velocidad &&
+                Caballo.Mac.Edad > Caballo.Willy.Edad &&
+                Caballo.Mac.Edad > Caballo.Smith.Edad &&
+                Caballo.Willy.Tono > Caballo.Smith.Tono &&
+                Caballo.Smith.Velocidad > Caballo.Jack.Velocidad &&
+                Caballo.Jack.Tono > Caballo.Smith.Tono
+                ) {
+
+                return true;
+
+            }
+
+            return false;
+        },
+
+        intervalo: setInterval(function(){
+
+            Caballo.Mac.Edad = Math.ceil(Math.random()*2);
+            Caballo.Mac.Velocidad = Math.ceil(Math.random()*2);
+            Caballo.Mac.Tono = Math.ceil(Math.random()*2);
+
+            Caballo.Smith.Edad = Math.ceil(Math.random()*2);
+            Caballo.Smith.Velocidad = Math.ceil(Math.random()*2);
+            Caballo.Smith.Tono = Math.ceil(Math.random()*2);
+
+            Caballo.Jack.Edad = Math.ceil(Math.random()*2);
+            Caballo.Jack.Velocidad = Math.ceil(Math.random()*2);
+            Caballo.Jack.Tono = Math.ceil(Math.random()*2);
+
+            Caballo.Willy.Edad = Math.ceil(Math.random()*2);
+            Caballo.Willy.Velocidad = Math.ceil(Math.random()*2);
+            Caballo.Willy.Tono = Math.ceil(Math.random()*2);
+
+            if(Caballo.resultado()){
+
+                clearInterval(Caballo.intervalo);
+                console.log("Caballo de Mac", Caballo.Mac);
+                console.log("Caballo de Smith", Caballo.Smith);
+                console.log("Caballo de Jack", Caballo.Jack);
+                console.log("Caballo de Willy", Caballo.Willy);
+            }
+
+        }, 1)
+    }
+
+    </script>
+    </body>
+</html>

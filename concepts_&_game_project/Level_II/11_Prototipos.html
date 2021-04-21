@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototipos</title>
+</head>
+<body>
+<script>
+//HERENCIA PROTOTIPAL
+function heredar(Hijo, Padre) {
+    //Funcion almacenar el padre
+    var noop = function() {}
+    noop.prototype = Padre.prototype
+    Hijo.prototype = new noop() 
+    Hijo.prototype.constructor = Hijo
+}
+
+//CREACION DE PROTOTIPO
+//De acuerdo ejercicio se anexa parametro lenguaje
+function Personas(nombre, apellido, edad, lenguaje) {
+    this.nombre = nombre
+    this.apellido = apellido
+    this.edad = edad
+    this.lenguaje = lenguaje
+}
+
+Personas.prototype.saludar = function() {
+   console.log(`Hola soy la persona ${this.nombre} ${this.apellido}`)
+}
+
+Personas.prototype.edadMayor = function() {
+   if (this.edad >= 18) {
+        console.log(`Veo ${this.nombre} ${this.apellido} que eres mayor de edad`)
+  } else {
+        console.log(`${this.nombre} ${this.apellido} eres menor de edad`)
+  }
+}
+
+Personas.prototype.lenguajeFavorito = function(){
+      console.log(`Para ${this.nombre} el lenguaje favor de programación es ${this.lenguaje}`)
+}
+
+//CREACION DE PROTOTIPO HEREDA DE PADRE
+function Developer(nombre, apellido, edad, lenguaje) {
+    this.nombre = nombre
+    this.apellido = apellido
+    this.edad = edad
+    this.lenguaje = lenguaje
+}
+
+//Se invoca aqui el saludo para que sea correcto
+heredar(Developer, Personas)
+
+//funcion todo lo que tiene Personas lo va a heredar Developer
+Developer.prototype.saludar = function() {
+    console.log(`Soy Dev ${this.nombre} ${this.apellido}`)
+}
+
+//De acuerdo ejercicio
+Developer.prototype.lenguajePreferido = function(){
+    console.log(`Soy Dev ${this.nombre} programo en ${this.lenguaje}`)	
+}
+
+//CREACION DE OBJETOS
+//De acuerdo ejercicio a resolver se anexa el parametro lenguaje
+var david = new Personas('David', 'Torres', 26, 'Python')
+var miguel = new Personas('Miguel', 'Varoni', 16, 'JavaScript')
+var carlos = new Developer('Carlos', 'Jerez', 30, 'PHP')
+var caroll = new Developer('Caroll', 'Diaz', 16, 'C#')
+
+//EJEMPLO HERENCIA PROTOTIPAL
+//carlos.edadMayor() //Veo Carlos Jerez que eres mayor de edad
+
+//EJEMPLO HERENCIA PROTOTIPAL
+//caroll.edadMayor() //Veo Caroll Diaz que eres menor de edad
+
+//david //Personas {nombre: "David", apellido: "Torres", edad: 26}
+
+//david.saludar() //Hola soy la persona David Torres
+
+//miguel //Personas {nombre: "Miguel", apellido: "Varoni", edad: 16}
+
+miguel.edadMayor() //Miguel Varoni eres menor de edad
+
+//carlos //Developer {nombre: "Carlos", apellido: "Jerez", edad: 30}
+
+carlos.saludar() //Soy dev Carlos Jerez
+
+carlos.lenguajePreferido()
+
+caroll.lenguajePreferido()
+
+</script>
+</body>

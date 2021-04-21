@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            text-align: center;
+            width: 50%;
+            border: none;
+            margin: 10px;
+        }
+
+        img{
+            padding: 0 5px 2px 14px;
+        }
+
+        h1{
+            text-align: center;
+            color: blue;
+            font-size: 200px;
+        }
+    </style>
+
+    <script src="Jquery/jquery-3.4.1.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            var elemento=document.querySelectorAll("img");
+
+            for (let index = 0; index < elemento.length; index++) {
+
+                elemento[index].addEventListener("mouseover", cambiar, false);
+
+                elemento[index].addEventListener("mouseout", restaurar, false);
+                
+            }
+        });
+
+        function cambiar(evento){
+
+            if(evento.target==img1){
+
+                $("#img1").attr("src" , "imgs/flia.jpg");
+            
+            }else if(evento.target==img2){
+
+                $("#img2").attr("src" , "imgs/flia.jpg");
+
+                }else if(evento.target==img3){
+
+                    $("#img3").attr("src" , "imgs/flia.jpg");
+                
+                }else if(evento.target==img4){
+
+                    $("#img4").attr("src" , "imgs/flia.jpg");
+                }        
+        } 
+
+        function restaurar(evento){
+
+            if(evento.target==img1){
+
+                $("#img1").attr("src" , "imgs/uno.jpg");
+            
+            }else if(evento.target==img2){
+
+                $("#img2").attr("src" , "imgs/dos.png");
+
+                }else if(evento.target==img3){
+
+                    $("#img3").attr("src" , "imgs/tres.webp");
+                
+                }else if(evento.target==img4){
+
+                    $("#img4").attr("src" , "imgs/cuatro.png");
+                }        
+        }    
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Galeria de Imagens</h1>
+
+    <table>
+        <tr>
+            <td><img src="imgs/uno.jpg" id="img1"></td>
+            <td><img src="imgs/dos.png" id="img2"></td>
+            <td><img src="imgs/tres.webp" id="img3"></td>
+            <td><img src="imgs/cuatro.png" id="img4"></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

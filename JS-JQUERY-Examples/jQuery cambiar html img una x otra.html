@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Jquery/jquery-3.4.1.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            document.getElementById("img1").addEventListener("mouseover", cambiar, false);
+
+            document.getElementById("img1").addEventListener("mouseout", restaurar, false);
+
+
+        });
+
+        function cambiar(){
+
+            $("img").attr("src" , "imgs/flia.jpg");
+
+        }
+
+        function restaurar(){
+
+        $("img").attr("src" , "imgs/arbol.jpg");
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+    <img src="imgs/arbol.jpg" id="img1">
+    
+</body>
+</html>

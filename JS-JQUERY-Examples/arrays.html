@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hola Arrays</title>
+
+<script>
+
+    var articulos=["zapatillas", "camiseta", "pantalon", "calcetines"];
+    
+</script>
+
+</head>
+
+<body>
+    <div class="contenedor">
+    <div class="header">
+        <p class="principal">Curso JavaSCript Pildoras Informaticas</p>
+        <h1>Manejando Arrays</h1>
+    
+    <script>
+        
+        document.write("el primer articulo es <strong>");
+
+        document.write(articulos[0] + "</strong></p>");
+
+        document.write("el ultimo elemento es <strong>");
+        // document.write(articulos[3]); si sabemos cuantos articulos hay
+        document.write(articulos[articulos.length-1]) + "</strong></p>"; //esta por si no lo sabemos
+
+        articulos.unshift("balon"); //se agrega en la primera posicion del arrays
+
+        document.write("<p> casi no olvidamos, de agregar este elemento <strong>");
+        
+        document.write(articulos[0]);
+
+        document.write("<p> agregar este elemento al final <strong>");
+        articulos.push(prompt("Introducir el articulo"));
+        document.write(articulos[articulos.length-1] + "</strong></p>");
+
+        alert("borraremos el primer elemento");
+        articulos.shift();
+
+        alert("borraremos el ultimo elemento");
+        articulos.pop();
+
+
+
+
+
+
+        alert(articulos.length);
+
+    </script>
+
+    </div>
+    </div>
+
+</body>
+</html>

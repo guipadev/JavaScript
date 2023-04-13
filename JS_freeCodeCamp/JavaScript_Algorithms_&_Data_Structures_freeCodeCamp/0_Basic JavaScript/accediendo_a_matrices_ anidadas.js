@@ -1,8 +1,9 @@
 /*
-Basic JavaScript: Accessing Nested Arrays
-As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays.
+JavaScript básico: acceder a matrices anidadas
+Como hemos visto en ejemplos anteriores, los objetos pueden contener tanto objetos anidados como matrices anidadas. 
+De manera similar al acceso a objetos anidados, la notación de corchete de matriz se puede encadenar para acceder a matrices anidadas.
 
-Here is an example of how to access a nested array:
+Aquí hay un ejemplo de cómo acceder a una matriz anidada:
 
 var ourPets = [
   {
@@ -24,7 +25,8 @@ var ourPets = [
 ];
 ourPets[0].names[1]; // "Fluffy"
 ourPets[1].names[0]; // "Spot"
-Retrieve the second tree from the variable myPlants using object dot and array bracket notation.
+
+Recupere el segundo árbol de la variable myPlants utilizando la notación de punto de objeto y corchete de matriz.
 
 
 */

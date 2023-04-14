@@ -11,9 +11,10 @@ function myFun() {
   console.log("byebye")
 }
 myFun();
-Lo anterior mostrará la cadena Helloen la consola y devolverá la cadena World. La cadena byebyenunca se mostrará en la consola, porque la función finaliza en la returninstrucción.
+Lo anterior mostrará la cadena Hello en la consola y devolverá la cadena World. La cadena byebye nunca se mostrará en la consola,
+porque la función finaliza en la return instrucción.
 
-Modifique la función abTestpara que si ao bson menores que 0la función salga inmediatamente con un valor de undefined.
+Modifique la función abTest para que si a o b son menores que 0 la función salga inmediatamente con un valor de undefined.
 
 Sugerencia
 Recuerde que undefinedes una palabra clave , no una cadena.
@@ -22,10 +23,6 @@ Recuerde que undefinedes una palabra clave , no una cadena.
 function abTest(a, b) {
   // Only change code below this line
 
-
-
-  // Only change code above this line
-
   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 
@@ -33,7 +30,10 @@ abTest(2,2);
 */
 
 function abTest(a, b) {
-  
+    
+    if (a < 0 || b < 0) {
+        return undefined;
+    }
   
     return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
   }

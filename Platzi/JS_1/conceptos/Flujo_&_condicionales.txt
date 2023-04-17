@@ -1,0 +1,26 @@
+Flujo y condicionales
+
+¿Qué tal si ahora podemos elegir el planeta?
+
+Creemos primero un algoritmo para resolver nuestro problema, para esto debemos aprender a usar condicionales.
+
+Para escribir una condicional usas la palabra reservada if, puedes escribir una como
+
+if (planeta == 1){
+    // Código si la condición se cumple
+} else {
+    // Código si la condición no se cumple
+}
+
+Si quisiéramos tener tener varias condiciones podemos escribir nuevas condiciones con la palabra reservada else if
+if (planeta == 1) {
+    // Código si la condición se cumple
+} else if (planeta == 2){
+    // Código si la segunda condición se cumple
+} else {
+    // Código si las condiciones no se cumplen
+}
+
+Recuerda:
+- El nombre de los archivos deberían seguir las mismas reglas que los nombres de variables
+- El código debería ser fácil de leer

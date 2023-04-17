@@ -1,0 +1,5 @@
+# Ejecutar servidor node, e ingresar en red local OS Unix
+http://debian.localhost:8080/
+
+# En OS Windows toca buscar la dirección ipconfig
+Ej: 192.168.56.1:8080

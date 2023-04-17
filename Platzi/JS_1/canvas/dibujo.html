@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dibujando con canvas</title>
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+</head>
+
+<body>
+    <h1>Dibujo en canvas</h1>
+    <p>
+        Cuantas lineas quieres
+        <input type="text" id="texto_lineas" />
+        <input type="button" value="A darle!" id="botoncito" />
+    </p>
+    <canvas width="300" height="300" id="dibujito"></canvas>
+    <p>Asi queda tu dibujo</p>
+    <script src="dibujo.js"></script>
+    <!--
+	Dibujando en el DOM
+	Vamos a dibujar en HTML, para esto usamos la etiqueta 
+
+	Para dibujar usamos JS para darle las instrucciones y los canvas funcionan con coordenadas
+
+	Solamente llegando al canvas no podemos dibujar, debemos crear un contexto, ahora sí, mira cómo dibujar con HTML y JavaScript
+
+	Recuerda:
+	ID es el identificador con el que podemos encontrar etiquetas con JavaScript, los nombres siguen las mismas reglas que las variables
+	 
+	Puedes obtener un elemento con su id buscándolo con document.getElementById('nombre_id');
+	-->
+</body>
+
+</html>

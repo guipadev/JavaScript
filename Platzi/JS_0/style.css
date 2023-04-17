@@ -1,0 +1,11 @@
+button {
+    background-color: tomato;
+    border-radius: 5px;
+    border: 2px solid tomato;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}

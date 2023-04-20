@@ -1,0 +1,13 @@
+5 consejos útiles sobre el método de clasificación de matriz de JavaScript
+
+JavaScript arrayses una colección ordenada que puede contener datos de cualquier tipo. Las matrices se crean con corchetes [...] y permiten elementos duplicados. En JavaScript, podemos ordenar los elementos de una matriz con el método integrado llamado sort().
+
+La matriz sort()es fácil de usar. En la mayoría de los casos se requiere una función de comparación.
+
+Aplicaremos sort() método con 5 maneras de forma util:
+
+- El método predeterminado array.sort() ordena los elementos de la matriz en orden ascendente convirtiéndolos en cadenas.
+- No lo use array.reverse() para clasificar. Puede conducir a resultados inesperados.
+- Podemos usar el método localeCompare() para ordenar los non-ASCIIcaracteres.
+- Ordenar una matriz de objetos muchos necesita ordenar en varios data types.
+- Case insensitive en algunos casos puede ser necesaria la clasificación.

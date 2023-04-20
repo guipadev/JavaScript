@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;   
+   	/*background: #FDF5E6;*/
+ 		background-image: url(https://cdn1.dotesports.com/wp-content/uploads/sites/4/2021/09/02192947/fnazqpEJt9rCBDCht9pPfh-1536x864-6.jpeg);
+}
+
+h1, h3, p {
+    color: #FF4742;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.title {
+    text-align: center;
+    padding: 16px;
+}
+
+
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  display: flex;
+  margin: auto auto 15px auto;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    max-width: 800px;
+    margin: auto;
+}
+
+.pokemon {
+    border: 1px solid rgba(51, 51, 51, 0.171);
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    background: #FFEFD5;
+}
+
+.vs {
+    text-align: center;
+    margin: auto;
+    font-size: 32px;
+}
+
+img {
+    height: 250px;
+		width: 250px;
+}

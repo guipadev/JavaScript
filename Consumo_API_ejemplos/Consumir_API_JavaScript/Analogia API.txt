@@ -1,0 +1,8 @@
+ANALOGIA DE UNA API
+Somos el CLIENTE en un restaurante y le realizamos un pedido especifico al CAMARERO
+El CAMARERO se dirige a la COCINA a realizar el pedido y cuando este el plato lo lleva al CLIENTE
+
+CLIENTE = USUARIO
+CAMARERO = API
+COCINA = BASE DE DATOS
+

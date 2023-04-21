@@ -1,0 +1,20 @@
+h1,
+h2 {
+    font-family: Lato;
+}
+
+.upper-case {
+    text-transform: uppercase;
+		color: #69C2F0;
+}
+
+.capitalize {
+    text-transform: capitalize;
+color: #69F089;
+}
+
+.user-message {}
+
+ul {
+    text-transform: capitalize;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <p class="upper-case">texto todo en mayuscula utilizando solo css</p>
+    <p class="capitalize">primer letra de cada palabra en mayuscula utilizando solo css</p>
+
+    <!--Dado el texto del usuario-->
+    <form id="userMessageInputForm">
+        <label for="inputMessage">Ingrese un texto</label>
+        <input id="inputMessage" name="inputMessage" />
+        <button>Guardar</button>
+    </form>
+
+    <ul id="messageUl">
+        <li><strong>Tus mensajes son:</strong></li>
+    </ul>
+
+    <!--De los mensjaes anteiror-->
+    <button id="upperCaseButton">Convertir primer letra de cada palabra a mayuscula</button>
+
+    <!--Realice el boton aterior de 2 amneras, con y sin hace moificaciones al texto ingresado por  el usuario al insertarlo-->
+    <script src="index.js"></script>
+</body>
+
+</html>

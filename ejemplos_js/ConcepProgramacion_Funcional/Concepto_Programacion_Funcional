@@ -1,0 +1,17 @@
+ Conjunto de lineamientos y practicas, prácticamente es seguir el lineamiento del calculo landa, una regla es que las funciones deben ser puras. 
+
+Concepto importantes:
+
+- Función Pura
+- Función Primer Orden
+- Función Orden Superior
+- Inmutabilidad
+
+Ejemplo inmutabilidad:
+var number = [1, 5, 10, 15]
+var doubles = numbers.map(function(x) {
+    return x * 2;
+});
+
+// double is now [2, 10, 20, 30]
+// number is still [1, 5, 10, 15]

@@ -1,0 +1,27 @@
+Un arrayes es una colección de elementos o ítems. 
+Usamos matrices para almacenar datos como elementos y recuperarlos cuando 
+los necesitamos. 
+La matriz es una estructura de datos ampliamente utilizada en muchos 
+lenguajes de programación y JavaScript no es una excepción.
+
+Es posible que deba fusionar una o más matrices para combinar todos los 
+elementos de las matrices individuales en una matriz. 
+Nos enfrentamos a esta necesidad cuando tenemos datos provenientes de 
+diferentes flujos y queremos fusionarlos en una estructura de datos.
+
+Aprenderemos cinco formas diferentes de combinar matrices en JavaScript. 
+También concluiremos cuál es la mejor forma entre todas y cuándo usarla.
+
+Genial, pero ¿cuál usar? ¿ El spreadoperador o el concat()método?
+Si está seguro de que las entradas son todas matrices, utilice el spreadoperador. 
+Es una forma muy sencilla y moderna de fusionar matrices. 
+Pero si no está seguro del tipo de elemento de entrada, use el concat()método.
+
+
+Para resumir,
+
+- Hay más de un par de formas de fusionar dos o más matrices en una sola en JavaScript.
+- Usar el spread operatoro el concat()método es la solución más óptima.
+-Si está seguro de que todas las entradas para fusionar son matrices, use spread operator. En caso de que no esté seguro, utilice el concat()método.
+- Puede usar el push()método para fusionar matrices cuando desee cambiar una de las matrices de entrada para fusionar.
+- Usar el reduce()método para fusionar matrices es un poco complicado.

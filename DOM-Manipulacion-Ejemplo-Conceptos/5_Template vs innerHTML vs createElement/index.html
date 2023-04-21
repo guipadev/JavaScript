@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola al DOM</h1>
+    <hr>
+    
+    <h2>Lleando lista con "Fragment"</h2>
+    <ul id="lista"></ul>
+    <hr>
+
+    <h2>Lleando ul con "innerHTML"</h2>
+    <ul id="lista2"></ul>
+    <hr>
+
+    <h2>Mejor opción con "template"</h2>
+    <!-- Igual que el fragmen no sera renderizado el template -->
+    <!-- Sirve para hacer estructuras que podemos en este caso replicar en el ul del HTML -->
+    <ul id="lista3"></ul>
+    <hr>
+
+    <template id="template-li">
+        <li class="list">
+            <b>nombre: </b> <span class="text-danger">${item}</span>
+        </li>
+    </template>                                                                                                                                                                                
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -211,3 +211,46 @@ const minChars = 5;
 const resultado = hervivoros.filter(
   (animal) => animal.nombre.length >= minChars
 ); // [ { id: 2, nombre: 'caballo } ]
+
+/**
+ * Copia superficial vs profunda
+ *
+ * - Podemos copiar elementos de forma superficial al utilizar el operador spred, Array.from y similar.
+ *
+ * - Si los elementos son valores primitivos, se copiarán por valor
+ */
+const original = ["rojo", true, 99];
+
+const copiaSuperficial = [...original];
+
+const copiaProfunda = original.slice();
+
+const copia = Array.from(original);
+
+copiaSuperficial[1] = false; // [ 'rojo', true, 99 ] [ 'rojo', false, 99 ]
+
+/**
+ * Copia superficial vs profunda
+ * Si los elementos a copiar son valores compuestos, se pasarán por referencia
+ */
+
+const originales = [
+  { id: 1, nombre: "rojo" },
+  { id: 2, nombre: "verde" },
+  { id: 3, nombre: "azul" },
+  { id: 4, nombre: "amarillo" },
+];
+
+const copias = Array.from(originales);
+
+originales[0].id = 666;
+
+/**
+ * Copia profunda
+ */
+
+const copiaProf = JSON.parse(JSON.stringify(original));
+
+copia[0].id = 666;
+
+console.log(original, copiaProf); // [ 'rojo', true, 99 ] [ 'rojo', true, 99 ]

@@ -80,6 +80,87 @@ console.log(employeesTier);
 /**
  * Array sort
  * Ordenar los elementos
+ * Muta el array original
  */
 
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sort(); // [ 1, 10, 2, 3, 4, 5, 6, 7, 8, 9 ]
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sort(function (num1, num2) {
+  if (num1 < num2) {
+    return -1;
+  } else if (num1 > num2) {
+    return 1;
+  } else {
+    return 0;
+  }
+}); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+
+// refactorizado sort
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sort(function (num1, num2) {
+  return num1 - num2; // forma asc cambia posiciones
+});
+
+// Ordenar los empleados
+const ordenEmpleado = [...employees].sort(function (a, b) {
+  // hacemos una copia para no mutar el array original
+  return a.salary - b.salary;
+});
+
+// refactorizado
+const ordenEmpleado2 = [...employees].sort((a, b) => a.salary - b.salary);
+
+console.log(ordenEmpleado);
+/*
+[
+  { name: 'David', salary: 75000, hireDate: 'August 15, 2009' },
+  { name: 'Ana', salary: 80000, hireDate: 'December 12, 2011' },
+  { name: 'John', salary: 90000, hireDate: 'July 1, 2010' }
+]
+*/
+
+/**
+ * Array reduce
+ * Reduce los valores del Array a un único valor
+ */
+
+const total = [1, 2, 3, 4, 5, 6, 7].reduce(function (total, current) {
+  console.log(total, current); // current => siguiente
+  return total + current;
+});
+
+console.log(total);
+
+/*
+1 2
+3 3
+6 4
+10 5
+15 6
+21 7
+28
+*/
+
+// Conocer el total de salario de los 3 empleados
+const totalSalaries = employees.reduce(function (total, current) {
+  return total + current.salary;
+}, 0); // 0 ya que el total seria el objeto y daria [object Object]7500080000
+
+// refactorizado
+const totalSalaries2 = employees.reduce(
+  (total, current) => total + current.salary,
+  0
+);
+
+console.log(totalSalaries); // 245000
+
+/**
+ * Method chaining, funciones de orden mayor combinadas
+ * Aplicar varios metodos para obtener un resultado esperado
+ */
+
+const totalHightier = employees
+  .map((employee) => employee.salary)
+  .filter((salary) => salary > 75000)
+  .reduce((total, current) => total + current);
+
+console.log(totalHightier); // 170000

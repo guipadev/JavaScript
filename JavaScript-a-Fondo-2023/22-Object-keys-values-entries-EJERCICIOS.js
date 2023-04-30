@@ -77,12 +77,24 @@ Object.entries(persons).forEach((person) => console.log(person));
  * Averigua, con Object.keys, si el objeto persons tiene propiedades.
  */
 
+const hasProperties = !!Object.keys(persons).length; // true
+
 /**
  * Con Object.values y Array.reduce averigua la suma total de todas las edades en persons.
  */
+
+const totalAge = Object.values(persons).reduce(
+  (total, current) => total + current
+);
 
 /**
  * Con Object.entries, Array.filter y Array.sort
  * crea un Array con con las propiedades de persons cuyo valor no supera 18,
  * ordenadas de menor a mayor.
  */
+
+for (const [name, age] of Object.entries(persons)
+  .sort((a, b) => a[1] - b[1])
+  .filter((person) => person[1] > 18)) {
+  console.log(name, age);
+}

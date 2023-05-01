@@ -88,3 +88,51 @@ const dog = {
 const { idDog, nameDog, colorDog, ...rest } = dog;
 
 rest; // { priceDog: { sale: 499, full: 599 } }
+
+/**
+ * EJERCICIO Desestructura objetos
+ */
+const city = {
+  name: "Barcelona",
+  weather: "Sunny",
+  coords: {
+    lat: 45.211448,
+    lang: 1.87654,
+  },
+};
+
+const weather = "cloudy";
+
+/**
+ * Extraer propiedades "name" y "weather" del objeto "city"
+ */
+
+const { name: nameCity, weather: weatherCity } = city;
+
+weatherCity; // 'sunny'
+
+/**
+ * Extrae las propiedades "lat" y "lang" del objeto "city"
+ */
+
+const {
+  coords: { lat, lang },
+} = city;
+
+lang; // 1.87654
+
+/**
+ * Extrae las propiedades "name" y resto del objeto "city"
+ * Luego desesctructura el resto de propiedades
+ */
+
+const { name, ...resto } = city;
+
+resto; // { weather: 'Sunny', coords: { lat: 45.211448, lang: 1.87654 } }
+
+const {
+  weather: cityWeather,
+  coords: { lat: lt, lang: lg },
+} = resto;
+
+lang; // 1.87654

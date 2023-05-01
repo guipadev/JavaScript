@@ -78,3 +78,50 @@ const fusionObject = JSON.parse(deppCloned);
 fusionObject.datos.color = "lila";
 
 console.log(mascota, fusionObject);
+
+/**
+ * EJERCICIO fusionar y clonar objetos
+ */
+
+// Starting code
+const person = {
+  name: "John",
+  surname: "Doe",
+  age: 50,
+  meta: {
+    eyeColor: "blue",
+  },
+};
+
+const city = {
+  name: "Barcelona",
+  weather: "sunny",
+  coords: {
+    lat: 45.211448,
+    lang: 1.87654,
+  },
+};
+
+/**
+ * Fusiona los objetos city y person (en este orden) en una única sentencia,
+ * manteniendo "Barcelona" como valor de name.
+ */
+
+const result = { ...city, ...person, name: city.name };
+
+/**
+ * Usa el objeto JSON para crear una copia profunda de person.
+ */
+
+const stringifiedPerson = JSON.stringify(person);
+const clonedPerson = JSON.parse(stringifiedPerson);
+
+/**
+ * ## Con `Object.assign` o el operador `...` podemos crear copias profundas de objetos.
+ * - [ ]  Si.
+ * - [ ]  No.
+ * - [ ]  Depende.
+ */
+
+// ✅ Depende, porque creará una copia profunda del primer nivel del objeto,
+// pero NO de posibles objetos anidados, que seguirán siendo una referencia al objeto original.

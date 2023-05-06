@@ -3,6 +3,15 @@
  * en busca de tres cosas:
  * el código de estado HTTP, el tipo de respuesta (que debe ser JSON) y el cuerpo de la respuesta
  * (que debe coincidir con el formato JSON esperado).
+ *
+ * Cada prueba verifica si se devuelven el código de estado HTTP esperado, el tipo de respuesta
+ * y el cuerpo de la respuesta.
+ * Si alguna de estas expectativas no se cumple, la prueba falla y muestra un mensaje de error.
+ *
+ * Estas pruebas son importantes para garantizar que la API funcione de manera correcta
+ * y consistente en diferentes puntos finales y solicitudes HTTP.
+ * Las pruebas se pueden ejecutar automáticamente, lo que facilita la detección de cualquier
+ * problema o regresión en la funcionalidad de la API.
  */
 
 import supertest from "supertest"; // Import supertest

@@ -169,14 +169,39 @@ Es una biblioteca de cliente HTTP popular para JavaScript. Proporciona una API s
 
 ### Instalaciones
 
-El proyecto se creo con ```yarn create vite```
+El proyecto se creo con: ```yarn create vite```
 
-Para inicializar front ```yarn```
+Para inicializar front: ```yarn```
 
-Para ejecutarlo/correr ```yarn dev```
+Para ejecutarlo/correr: ```yarn dev```
+
+#### Se instalo las herramientas antes mencionadas:
+
+- Consumo API: ```yarn add axios```
+
+- Enrutamiento básico en nuestra aplicación: ```yarn add react-router-dom```
 
 
+# Documentada la API REST con Swagger
 
+En empresas es muy habitual tener equipos back-end y front-end. Cuando se está desarrollando una API y necesita integrarse con una aplicación front-end, sería muy tedioso preguntar qué punto final hace qué y qué parámetros se deben pasar. Si tiene toda esa información en un solo lugar, puede ir allí y leerla usted mismo. 
 
+Swagger es un conjunto de herramientas de código abierto que ayudan a los desarrolladores a crear, documentar y consumir servicios web RESTful. Proporciona una interfaz gráfica fácil de usar para que los usuarios interactúen con una API y también genera código de cliente para varios lenguajes de programación para facilitar la integración de la API.
 
+## Swagger 
+Proporciona un conjunto completo de funciones para el desarrollo de API, incluido el diseño, la documentación, las pruebas y la generación de código de API. Permite a los desarrolladores definir los puntos finales de la API, los parámetros de entrada, la salida esperada y los requisitos de autenticación de forma estandarizada mediante la especificación OpenAPI.
 
+## Swagger UI
+Es una herramienta popular que presenta las especificaciones de OpenAPI como una documentación de API interactiva que permite a los desarrolladores explorar y probar las API a través de un navegador web. Proporciona una interfaz fácil de usar que permite a los desarrolladores ver e interactuar fácilmente con los puntos finales de la API.
+
+### Implementación Swagger
+Necesitaremos instalar en el backend dos dependencias. 
+
+```npm i swagger-jsdoc```
+y 
+```npm i swagger-ui-express```
+
+La documentación de la API en GUI puede verla en la siguiente dirección:
+```
+http://localhost:3000/api-docs/
+```

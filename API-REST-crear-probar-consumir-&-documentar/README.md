@@ -97,6 +97,63 @@ https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patte
 ## El código
 Construiremos una API para un negocio de refugio de mascotas. Este refugio de mascotas necesita registrar las mascotas que se hospedan en el refugio, y para eso realizaremos operaciones CRUD básicas (crear, leer, actualizar y eliminar).
 
+## Probar una API REST con Supertest
+
+SuperTest es una biblioteca de JavaScript que se utiliza para probar servidores HTTP o aplicaciones web que realizan solicitudes HTTP. Proporciona una abstracción de alto nivel para probar HTTP, lo que permite a los desarrolladores enviar solicitudes HTTP y hacer afirmaciones sobre las respuestas recibidas, lo que facilita la escritura de pruebas automatizadas para aplicaciones web.
+
+SuperTest funciona con cualquier marco de prueba de JavaScript, como Mocha o Jest , y se puede usar con cualquier servidor HTTP o marco de aplicación web, como Express.
+
+### Configurar uso SuperTest
+Primero necesitaremos instalar algunas dependencias. 
+En package.json archivo y reemplazar las devDependencies sección con esto y luego correr ```npm install```
+
+```
+"devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "jest-babel": "^1.0.1",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  }
+```
+Aquí estamos instalando las bibliotecas supertesty jest, que necesitamos para que se ejecuten nuestras pruebas, además de algunas babel cosas que necesitamos para que nuestro proyecto identifique correctamente qué archivos son archivos de prueba.
+
+Incluir en package.json, este script:
+
+```
+"scripts": {
+    "test": "jest"
+  },
+```
+
+Para finalizar con el modelo estándar, en la raíz del proyecto, crear un babel.config.cjs archivo e incluir este código en él:
+
+```
+//babel.config.cjs
+module.exports = {
+    presets: [
+      [
+        '@babel/preset-env',
+        {
+          targets: {
+            node: 'current',
+          },
+        },
+      ],
+    ],
+  };
+```
+
+
+
+
+
+
+
+
+
 
 
 

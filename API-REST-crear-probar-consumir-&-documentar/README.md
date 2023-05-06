@@ -146,14 +146,34 @@ module.exports = {
   };
 ```
 
+## Ejecuta pruebta test
 
+En la terminal, ejecuta ```npm test```, y debería ver pasar todas tus pruebas.
 
+# Consumir una API REST en una aplicación Front-end React
 
+Si nuestro servidor se está ejecutando y nuestros puntos finales se comportan como se esperaba. Se realiza aplicación front-end para consumir nuestra API.
 
+Para este ejemplo, usaremos una aplicación React y dos herramientas diferentes para enviar y procesar nuestras solicitudes: la API Fetch y la biblioteca Axios.
 
+## Nuestras herramientas
 
+### React 
+Es una biblioteca de JavaScript popular para crear interfaces de usuario. Permite a los desarrolladores crear componentes de interfaz de usuario reutilizables y actualizarlos y renderizarlos de manera eficiente en respuesta a los cambios en el estado de la aplicación.
 
+### Fetch API 
+Es una API de navegador moderna que permite a los desarrolladores realizar solicitudes HTTP asincrónicas desde el código JavaScript del lado del cliente. Proporciona una interfaz simple para obtener recursos a través de la red y admite una variedad de tipos de solicitudes y respuestas.
 
+### Axios 
+Es una biblioteca de cliente HTTP popular para JavaScript. Proporciona una API simple e intuitiva para realizar solicitudes HTTP y es compatible con una amplia gama de funciones, incluida la intercepción de solicitudes y respuestas, transformaciones automáticas para datos de solicitudes y respuestas, y la capacidad de cancelar solicitudes. Se puede usar tanto en el navegador como en el servidor, y a menudo se usa junto con las aplicaciones React.
+
+### Instalaciones
+
+El proyecto se creo con ```yarn create vite```
+
+Para inicializar front ```yarn```
+
+Para ejecutarlo/correr ```yarn dev```
 
 
 

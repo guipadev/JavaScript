@@ -24,16 +24,75 @@
  * La autoexplicativa que es su sintaxis. 👌
  */
 
-const { isPalindrome } = require("./index.js");
+const { isPalindrome, twoSum } = require("./index.js");
 
-//isPalindrome = require("./index.js");
-
-console.log(typeof isPalindrome);
-
+/*
 test("neuquen is palindrom", () => {
   expect(isPalindrome("neuquen")).toBe(true);
 });
 
 test("bariloche is not palindrom", () => {
   expect(isPalindrome("bariloche")).toBe(false);
+});
+*/
+
+/**
+ * La función toma dos parámetros, una matriz de números y un número de valor objetivo.
+ * Lo que hace es identificar si hay dos números en la matriz que suman el valor del
+ * segundo parámetro. Si los dos valores existen en la matriz, los devuelve en una matriz
+ * y, si no, devuelve falso.
+ */
+
+/*
+test("[2,7,11,15] and 9 returns [2, 7]", () => {
+  expect(twoSum([2, 7, 11, 15], 9)).toEqual([2, 7]);
+});
+
+test("[3,2,4] and 6 returns [2, 4]", () => {
+  expect(twoSum([3, 2, 4], 6)).toEqual([2, 4]);
+});
+
+test("[3,2,4] and 10 returns false", () => {
+  expect(twoSum([3, 2, 4], 10)).toBe(false);
+});
+*/
+
+/**
+ * Por ejemplo, .toBe()se usa para evaluar primitivas como cadenas, números o booleanos.
+ * toEqual()se usa para evaluar objetos (que cubre casi todo lo demás en Javascript).
+ *
+ * Comparar el valor devuelto con un número se podría usar, .toBeGreaterThan() etc.
+ * toBeGreaterThanOrEqual()
+ */
+
+/**
+ * Jest nos proporciona una describe() función que podemos usar para agrupar las pruebas
+ * y mostrar los resultados de una manera más esquemática.
+ *
+ * El primer parámetro es la descripción que queremos mostrar para el grupo de pruebas dado,
+ * y el segundo es una devolución de llamada que contiene nuestras pruebas.
+ */
+
+describe("isPalindrome function", () => {
+  test("neuquen is palindrom", () => {
+    expect(isPalindrome("neuquen")).toBe(true);
+  });
+
+  test("bariloche is not palindrom", () => {
+    expect(isPalindrome("bariloche")).toBe(false);
+  });
+});
+
+describe("twoSum function", () => {
+  test("[2,7,11,15] and 9 returns [2, 7]", () => {
+    expect(twoSum([2, 7, 11, 15], 9)).toEqual([2, 7]);
+  });
+
+  test("[3,2,4] and 6 returns [2, 4]", () => {
+    expect(twoSum([3, 2, 4], 6)).toEqual([2, 4]);
+  });
+
+  test("[3,2,4] and 10 returns false", () => {
+    expect(twoSum([3, 2, 4], 10)).toBe(false);
+  });
 });

@@ -52,3 +52,28 @@ Si no hacemos esto e intentamos implementar ESmodules en Node, obtendremos un er
 ...
 SyntaxError: Cannot use import statement outside a module
 ```
+
+### aplicación de Node
+
+Ejecutando ```npm init -y```
+
+Luego, necesitaremos instalar Webpack y la CLI de Webpack ejecutando ```npm i --save-dev webpack webpack-cli```
+
+package.jsonarchivo y agreguemos un build script, como este:
+
+```
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  }
+```
+
+Luego podemos volver a nuestra terminal y ejecutar ```npm run build```. 
+Eso debería crear un dist directorio dentro de nuestro proyecto, y dentro de él un bundle.js archivo.
+
+Si revisa ese archivo, verá este código dentro
+
+```
+(()=>{"use strict";document.getElementById("isAlive").addEventListener("click",(()=>console.log("Mod1 is alive!"))),document.getElementById("isRolling").addEventListener("click",(()=>console.log("Mod1 is rolling, baby!"))),console.log("Im the main function")})();
+
+```

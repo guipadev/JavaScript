@@ -1,13 +1,14 @@
 /*
 Prevenir la mutación de objetos
 
-Como se vio en el desafío anterior, const la declaración por sí sola no protege realmente sus datos 
-de la mutación. 
+Como se vio en el desafío anterior, const la declaración por sí sola no protege realmente 
+sus datos de la mutación. 
+
 Para garantizar que sus datos no cambien, JavaScript proporciona una función Object.freeze 
 para evitar la mutación de datos.
 
-Cualquier intento de cambiar el objeto será rechazado y se generará un error si el script se ejecuta 
-en modo estricto.
+Cualquier intento de cambiar el objeto será rechazado y se generará un error si el script 
+se ejecuta en modo estricto.
 
 let obj = {
   name:"FreeCodeCamp",
@@ -50,18 +51,18 @@ const PI = freezeObj();
 */
 
 function freezeObj() {
-    
-    const MATH_CONSTANTS = {
-      PI: 3.14
-    };
-    
-    Object.freeze(MATH_CONSTANTS);
-    
-    try {
-      MATH_CONSTANTS.PI = 99;
-    } catch(ex) {
-      console.log(ex);
-    }
-    return MATH_CONSTANTS.PI;
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+
+  Object.freeze(MATH_CONSTANTS);
+
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
   }
-  const PI = freezeObj();
+  return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();

@@ -9,7 +9,8 @@ doubler(4);
 
 doubler(4) devolvería el valor 8.
 
-Si una función de flecha tiene un solo parámetro, se pueden omitir los paréntesis que encierran el parámetro.
+Si una función de flecha tiene un solo parámetro, se pueden omitir los paréntesis que 
+encierran el parámetro.
 
 const doubler = item => item * 2;
 
@@ -33,7 +34,7 @@ console.log(myConcat([1, 2], [3, 4, 5]));
 */
 
 const myConcat = (arr1, arr2) => {
-    return arr1.concat(arr2);
+  return arr1.concat(arr2);
 };
-  
-console.log(myConcat([1, 2], [3, 4, 5]));
+
+console.log(myConcat([1, 2], [3, 4, 5])); // [ 1, 2, 3, 4, 5 ]

@@ -14,11 +14,13 @@ const age = user.age;
 
 name tendría un valor de la cadena John Doe, y age tendría el número 34.
 
-Aquí hay una declaración de asignación equivalente que usa la sintaxis de desestructuración de ES6:
+Aquí hay una declaración de asignación equivalente que usa la sintaxis 
+de desestructuración de ES6:
 
 const { name, age } = user;
 
-Nuevamente, name tendría un valor de la cadena John Doe y age tendría el número 34.
+Nuevamente, name tendría un valor de la cadena John Doe 
+y age tendría el número 34.
 
 Aquí, las variables name y age se crearán y se les asignarán los valores de sus respectivos valores 
 del user objeto. Puedes ver cuánto más limpio es esto.
@@ -41,11 +43,9 @@ const tomorrow = HIGH_TEMPERATURES.tomorrow;
 */
 
 const HIGH_TEMPERATURES = {
-    yesterday: 75,
-    today: 77,
-    tomorrow: 80
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80,
 };
 
-const { today } = HIGH_TEMPERATURES;
-
-const { tomorrow } = HIGH_TEMPERATURES;
+const { today, tomorrow } = HIGH_TEMPERATURES;

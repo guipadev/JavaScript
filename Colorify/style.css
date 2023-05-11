@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  border: 1px solid #000000;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.action {
+  margin: 10px;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0.5rem 2.5rem;
+  background: tomato;
+  color: #ffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: normal;
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  appearance: none;
+  cursor: pointer;
+  transition: background 250ms, box-shadow 250ms;
+}

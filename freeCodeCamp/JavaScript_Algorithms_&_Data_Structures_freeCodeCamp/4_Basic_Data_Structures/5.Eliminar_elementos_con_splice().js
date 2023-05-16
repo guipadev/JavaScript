@@ -1,24 +1,35 @@
 /*
 Eliminar elementos con splice ()
 
-Bien, hemos aprendido cómo eliminar elementos del principio y el final de las matrices usando shift () y pop (), pero ¿qué pasa si queremos eliminar un elemento de algún lugar en el medio?
-¿O eliminar más de un elemento a la vez? Bueno, ahí es donde entra en juego splice (). 
-Splice () nos permite hacer precisamente eso: eliminar cualquier número de elementos consecutivos de cualquier parte de una matriz.
+Bien, hemos aprendido cï¿½mo eliminar elementos del principio y el final de las matrices 
+usando shift () y pop (), pero ï¿½quï¿½ pasa si queremos eliminar un elemento de algï¿½n lugar 
+en el medio?
+ï¿½O eliminar mï¿½s de un elemento a la vez? 
+Bueno, ahï¿½ es donde entra en juego splice (). 
+Splice () nos permite hacer precisamente eso: 
+eliminar cualquier nï¿½mero de elementos consecutivos de cualquier parte de una matriz.
 
-splice () puede tomar hasta 3 parámetros, pero por ahora, nos centraremos solo en los primeros 2. 
-Los dos primeros parámetros de splice () son números enteros que representan índices, o posiciones, de la matriz que splice () está siendo exhortó a. 
-Y recuerde, las matrices tienen un índice cero, por lo que para indicar el primer elemento de una matriz, usaríamos 0. 
+splice () puede tomar hasta 3 parï¿½metros, pero por ahora, nos centraremos solo en los 
+primeros 2. 
+Los dos primeros parï¿½metros de splice () son nï¿½meros enteros que representan ï¿½ndices, 
+o posiciones, de la matriz que splice () estï¿½ siendo exhortï¿½ a. 
+Y recuerde, las matrices tienen un ï¿½ndice cero, por lo que para indicar el primer elemento 
+de una matriz, usarï¿½amos 0. 
 
-El primer parámetro de splice () representa el índice de la matriz desde el cual comenzar a eliminar elementos, 
-mientras que el segundo parámetro indica el número de elementos a eliminar. Por ejemplo:
+El primer parï¿½metro de splice () representa el ï¿½ndice de la matriz desde el cual comenzar
+a eliminar elementos, 
+mientras que el segundo parï¿½metro indica el nï¿½mero de elementos a eliminar. 
+Por ejemplo:
 
 let array = ['today', 'was', 'not', 'so', 'great'];
 
 array.splice(2, 2);
 
-Aquí eliminamos 2 elementos, comenzando con el tercer elemento (en el índice 2). array tendría el valor ['today', 'was', 'great'].
+Aquï¿½ eliminamos 2 elementos, comenzando con el tercer elemento (en el ï¿½ndice 2). 
+array tendrï¿½a el valor ['today', 'was', 'great'].
 
-splice () no solo modifica la matriz a la que se llama, sino que también devuelve una nueva matriz que contiene el valor de los elementos eliminados:
+splice () no solo modifica la matriz a la que se llama, sino que tambiï¿½n devuelve 
+una nueva matriz que contiene el valor de los elementos eliminados:
 
 let array = ['I', 'am', 'feeling', 'really', 'happy'];
 
@@ -29,32 +40,42 @@ newArray tiene el valor ['really', 'happy'].
 
 /*
 Hemos inicializado una matriz arr. 
-Use splice () para eliminar elementos de arr, de modo que solo contenga elementos que sumen el valor de 10.
+Use splice () para eliminar elementos de arr, de modo que solo contenga elementos que 
+sumen el valor de 10.
+
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// Only change code below this line
+
+// Only change code above this line
+console.log(arr);
 */
 
 /*
-Explicación del problema
-La función splice () debe llamarse en la matriz arr para eliminar 1 o más elementos del centro de la matriz.
+Explicaciï¿½n del problema
+La funciï¿½n splice () debe llamarse en la matriz arr para eliminar 1 o mï¿½s elementos 
+del centro de la matriz.
 
-Sugerencias
 Sugerencia 1
-La matriz arr actualmente suma el valor de 27. Simplemente elimine tantos elementos de arr, por lo que la suma de los elementos restantes es 10.
+La matriz arr actualmente suma el valor de 27. 
+Simplemente elimine tantos elementos de arr, por lo que la suma de los elementos 
+restantes es 10.
 
 Pista 2
-Piense en qué grupo de elementos consecutivos puede eliminar para que los únicos elementos que quedan sumen 10.
+Piense en quï¿½ grupo de elementos consecutivos puede eliminar para que los ï¿½nicos 
+elementos que quedan sumen 10.
 */
 
 //Option 1
 const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 
-arr.splice(4,4);
-arr.splice(0,1);
+arr.splice(4, 4);
+arr.splice(0, 1);
 
 console.log(arr); // [4, 5, 1]
 
 //Option 2
-const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+const arr2 = [2, 4, 5, 1, 7, 5, 2, 1];
 
-arr.splice(1, 4);
+arr2.splice(1, 4);
 
-console.log(arr); //[2, 5, 2, 1]
+console.log(arr2); //[2, 5, 2, 1]

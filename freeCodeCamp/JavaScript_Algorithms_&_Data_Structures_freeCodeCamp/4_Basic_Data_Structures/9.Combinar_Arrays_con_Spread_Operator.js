@@ -2,31 +2,39 @@
 Combinar Arrays con el Spread Operator
 
 Otra gran ventaja del operador spread es la capacidad de combinar matrices, 
-o de insertar todos los elementos de una matriz en otra, en cualquier índice. 
-Con sintaxis más tradicionales, podemos concatenar matrices, pero esto solo nos permite 
+o de insertar todos los elementos de una matriz en otra, en cualquier ï¿½ndice. 
+Con sintaxis mï¿½s tradicionales, podemos concatenar matrices, pero esto solo nos permite 
 combinar matrices al final de una y al comienzo de otra. 
 
-La sintaxis de propagación hace que la siguiente operación sea extremadamente simple:
+La sintaxis de propagaciï¿½n hace que la siguiente operaciï¿½n sea extremadamente simple:
 
 let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
 
 let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
 
-thatArray tendría el valor ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander'].
+thatArray tendrï¿½a el valor ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander'].
 
-Usando la sintaxis extendida, acabamos de lograr una operación que habría sido más compleja y 
-más detallada si hubiéramos usado métodos tradicionales.
+Usando la sintaxis extendida, acabamos de lograr una operaciï¿½n que habrï¿½a sido mï¿½s compleja 
+y mï¿½s detallada si hubiï¿½ramos usado mï¿½todos tradicionales.
 */
 
 /*
-Hemos definido una función spreadOut que devuelve la variable sentence.
-Modifique la función usando el operador de propagación para que devuelva la matriz
+Hemos definido una funciï¿½n spreadOut que devuelve la variable sentence.
+Modifique la funciï¿½n usando el operador de propagaciï¿½n para que devuelva la matriz
 ['learning', 'to', 'code', 'is', 'fun'].
-*/
 
 function spreadOut() {
   let fragment = ['to', 'code'];
-  let sentence = ['learning', ...fragment, 'is', 'fun'];
+  let sentence; // Change this line
+  return sentence;
+}
+
+console.log(spreadOut());
+*/
+
+function spreadOut() {
+  let fragment = ["to", "code"];
+  let sentence = ["learning", ...fragment, "is", "fun"];
   return sentence;
 }
 

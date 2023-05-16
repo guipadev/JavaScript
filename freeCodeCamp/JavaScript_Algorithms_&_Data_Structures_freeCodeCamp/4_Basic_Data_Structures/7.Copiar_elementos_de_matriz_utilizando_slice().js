@@ -1,45 +1,65 @@
 /*
 Copiar elementos de matriz utilizando slice ()
 
-El siguiente método que cubriremos es slice ().
-En lugar de modificar una matriz, slice () copia o extrae un número determinado de elementos en una nueva matriz, 
+El siguiente mï¿½todo que cubriremos es slice ().
+En lugar de modificar una matriz, slice () copia o extrae un nï¿½mero determinado de elementos
+en una nueva matriz, 
 dejando intacta la matriz a la que se llama. 
-slice () toma solo 2 parámetros: el primero es el índice en el que comenzar la extracción y el segundo es el índice en el que detener la extracción
-(la extracción ocurrirá hasta, pero sin incluir el elemento en este índice). Considera esto:
+slice () toma solo 2 parï¿½metros: 
+el primero es el ï¿½ndice en el que comenzar la extracciï¿½n y 
+el segundo es el ï¿½ndice en el que detener la extracciï¿½n
+(la extracciï¿½n ocurrirï¿½ hasta, pero sin incluir el elemento en este ï¿½ndice). 
+
+Considera esto:
 
 let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
 
 let todaysWeather = weatherConditions.slice(1, 3);
 
-todaysWeather tendría el valor ['snow', 'sleet'], 
-mientras que weatherConditions todavía tendría ['rain', 'snow', 'sleet', 'hail', 'clear'].
+todaysWeather tendrï¿½a el valor ['snow', 'sleet'], 
+
+mientras que weatherConditions todavï¿½a tendrï¿½a ['rain', 'snow', 'sleet', 'hail', 'clear'].
 
 De hecho, hemos creado una nueva matriz extrayendo elementos de una matriz existente.
 */
 
 /*
-Hemos definido una función, forecast, que toma una matriz como argumento. Modifique la función usando slice () 
-para extraer información de la matriz de argumentos y devolver una nueva matriz que contiene los elementos de cadena warm y sunny.
+Hemos definido una funciï¿½n, forecast, que toma una matriz como argumento. 
+Modifique la funciï¿½n usando slice () 
+para extraer informaciï¿½n de la matriz de argumentos y devolver una nueva matriz 
+que contiene los elementos de cadena warm y sunny.
+
+function forecast(arr) {
+  // Only change code below this line
+
+  return arr;
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 */
 
 /*
 Copiar elementos de matriz con slice ()
 
-- la función slice () debe usarse para devolver una matriz que consta solo de cálido y soleado.
-- Por lo tanto, se deben pasar dos parámetros a la función slice (). 
-El primer parámetro debe ser el índice en el que desea que comience la subcadena. 
-El segundo parámetro debe ser el índice en el que termina la subcadena.
-- Nota: El segundo parámetro terminará la subcadena en ese índice exacto.
+- la funciï¿½n slice () debe usarse para devolver una matriz que consta solo 
+de cï¿½lido y soleado.
+- Por lo tanto, se deben pasar dos parï¿½metros a la funciï¿½n slice (). 
+El primer parï¿½metro debe ser el ï¿½ndice en el que desea que comience la subcadena. 
+El segundo parï¿½metro debe ser el ï¿½ndice en el que termina la subcadena.
+- Nota: El segundo parï¿½metro terminarï¿½ la subcadena en ese ï¿½ndice exacto.
 
 Ejemplo:
 return arr.slice (1, 4);
 
-Esto devolverá una subcadena que consta de índices [1,2,3] //Nota: arr [4] NO está incluido.
+Esto devolverï¿½ una subcadena que consta de ï¿½ndices [1,2,3] //Nota: arr [4] NO estï¿½ incluido.
 */
 
 function forecast(arr) {
-   return arr.slice(2,4);
+  return arr.slice(2, 4);
 }
 
 // Only change code above this line
-console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+console.log(
+  forecast(["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"])
+);

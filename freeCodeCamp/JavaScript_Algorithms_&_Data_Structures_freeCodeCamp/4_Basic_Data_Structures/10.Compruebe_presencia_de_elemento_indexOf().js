@@ -1,25 +1,38 @@
 /*
 Compruebe la presencia de un elemento con indexOf ()
 
-Dado que las matrices se pueden cambiar o mutar en cualquier momento, no hay garantía de dónde estará un dato
-en particular en una matriz determinada, o si ese elemento aún existe. Afortunadamente, JavaScript nos proporciona 
-otro método integrado, indexOf (), que nos permite verificar rápida y fácilmente la presencia de un elemento en una matriz.
-indexOf () toma un elemento como parámetro y, cuando se llama, devuelve la posición, o índice, de ese elemento, o 
--1 si el elemento no existe en la matriz.
+Dado que las matrices se pueden cambiar o mutar en cualquier momento, no hay garantï¿½a de 
+dï¿½nde estarï¿½ un dato en particular en una matriz determinada, o si ese elemento aï¿½n existe.
+Afortunadamente, JavaScript nos proporciona  otro mï¿½todo integrado, indexOf (), 
+que nos permite verificar rï¿½pida y fï¿½cilmente la presencia de un elemento en una matriz.
+indexOf () toma un elemento como parï¿½metro y, cuando se llama, devuelve la posiciï¿½n, 
+o ï¿½ndice, de ese elemento, o -1 si el elemento no existe en la matriz.
 
 Por ejemplo:
 
 let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
 
 fruits.indexOf('dates'); // returns  -1
+
 fruits.indexOf('oranges'); // returns  2
-fruits.indexOf('pears'); // returns  1 (el primer índice en el que existe cada elemento)
+
+fruits.indexOf('pears'); // returns  1 (el primer ï¿½ndice en el que existe cada elemento)
 */
 
 /*
-indexOf () puede ser increíblemente útil para verificar rápidamente la presencia de un elemento en una matriz. 
-Hemos definido una función, quickCheck, que toma una matriz y un elemento como argumentos. 
-Modifique la función usando indexOf () para que devuelva verdadero si el elemento pasado existe en la matriz y falso si no.
+indexOf () puede ser increiblemente util para verificar rÃ¡idamente la presencia de un 
+elemento en una matriz. 
+Hemos definido una funciÃ³n, quickCheck, que toma una matriz y un elemento como argumentos. 
+Modifique la funciÃ³n usando indexOf() para que devuelva verdadero si el elemento pasado 
+existe en la matriz y falso si no.
+
+function quickCheck(arr, elem) {
+  // Only change code below this line
+
+  // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 */
 
 //solutions 1

@@ -1,0 +1,82 @@
+/*
+Las imágenes del mismo Melting Snowman se crearán con archivos de imagen, no a través de código. 
+*/
+body {
+  background-color: #b9b7b7;
+}
+
+/*
+Configuraremos la categoría "container" para que se muestre como un contenedor flexible y centraremos su contenido.
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*
+Clasificación "Melting Snowman" que establece el ancho y alto del tablero de juego, 
+le agregamos un perímetro y centrar su contenido.
+*/
+.MeltingSnowman {
+  width: 400px;
+  height: 400px;
+  border: 2px solid blue;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+Adaptaremos la palabra que se va a adivinar y las letras que se han utilizado. 
+Aplicaremos la clasificación "word" para especificar el tamaño de fuente y centrar el contenido.
+*/
+.word {
+  font-size: 2rem;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+Para la clasificación de "letters", agregaremos márgenes y usaremos flex-wrap para garantizar que 
+los botones se organicen sistemáticamente en filas. 
+También crearemos un estilo de botón para los botones de letras, especificando un margen, relleno
+y color de fondo.
+*/
+.letters {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.letters button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*
+Insertaremos una clasificación de "menssage" para diseñar el mensaje de victoria/derrota. 
+Especificaremos el tamaño de fuente y centraremos el contenido usando Flexbox. 
+*/
+.message {
+  font-size: 1.5rem;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

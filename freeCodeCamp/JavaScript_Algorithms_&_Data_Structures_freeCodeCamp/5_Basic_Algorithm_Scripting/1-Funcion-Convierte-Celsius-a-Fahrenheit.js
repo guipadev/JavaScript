@@ -9,11 +9,18 @@ Utiliza la variable fahrenheit ya definida y asígnale la temperatura Fahrenheit
 equivalente a la temperatura Celsius dada. 
 Utiliza el algoritmo mencionado arriba para ayudar a convertir la temperatura 
 en Celsius a Fahrenheit.
+
+function convertCtoF(celsius) {
+  let fahrenheit;
+  return fahrenheit;
+}
+
+convertCtoF(30);
 */
 
 function convertToF(celsius) {
-    let fahrenheit = celsius * (9 / 5) + 32;
-    return fahrenheit;
+  let fahrenheit = celsius * (9 / 5) + 32;
+  return fahrenheit;
 }
-  
+
 console.log(convertToF(30)); // 86

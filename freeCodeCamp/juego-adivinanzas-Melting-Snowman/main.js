@@ -19,41 +19,32 @@ const words = [
 // Definir el número máximo de conjeturas incorrectas permitidas
 const maxWrongGuesses = 6;
 
-/**
- * VAR: wordToGuess, guessedLetters, wrongGuessesy imageCount.
- * wordToGuess: contendrá la palabra aleatoria que el jugador necesita adivinar.
- * guessedLetters: contendrá una serie de guiones bajos que representan las letras no adivinadas de la palabra.
- * wrongGuesses: hará un seguimiento del número de conjeturas incorrectas que ha hecho el jugador.
- * imageCount: utiliza para determinar qué imagen de Muñeco de nieve derritiéndose a mostrar.
- */
-
+// contendrá la palabra aleatoria que el jugador necesita adivinar.
 let wordToGuess = "";
+
+// contendrá una serie de guiones bajos que representan las letras no adivinadas de la palabra.
 let guessedLetters = [];
+
+// hará un seguimiento del número de conjeturas incorrectas que ha hecho el jugador
 let wrongGuesses = 0;
+
+// utiliza para determinar qué imagen de Muñeco de nieve derritiéndose a mostrar
 let imageCount = 1;
 
-/**
- * Función llamada selectRandomWord()
- * que selecciona una palabra aleatoria de la matriz de palabras usando la Math.random() función.
- */
-
-// Selecciona una palabra al azar de la lista
+// Selecciona una palabra aleatoria de la matriz de palabras usando la Math.random()
 function selectRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
 }
 
-/**
- * - initializeGame() función que inicializa el juego.
- * - variable wordToGuess una palabra seleccionada al azar,
- * - guessedLetters una matriz de guiones bajos "_",
- * - wrongGuesses en 0
- *   genera los botones de letras para que el jugador haga conjeturas y borra cualquier mensaje previo de ganar/perder.
- */
-
 // Inicializa el juego
 function initializeGame() {
+  // una palabra seleccionada al azar
   wordToGuess = selectRandomWord();
+
+  // una matriz de guiones bajos "_"
   guessedLetters = Array(wordToGuess.length).fill("_");
+
+  // número de conjeturas incorrectas, inicia en 0
   wrongGuesses = 0;
 
   // Actualizar la pantalla de palabras
@@ -68,7 +59,7 @@ function initializeGame() {
     lettersContainer.removeChild(lettersContainer.firstChild);
   }
 
-  // Generar los botones de letras
+  // Generar los botones de letras para que el jugador haga conjeturas
   for (let i = 0; i < 26; i++) {
     const letter = String.fromCharCode(65 + i);
     const button = document.createElement("button");
@@ -81,6 +72,7 @@ function initializeGame() {
 
   // Borrar cualquier mensaje anterior de ganar/perder
   const messageContainer = document.querySelector(".message");
+
   messageContainer.innerText = "";
 }
 

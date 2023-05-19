@@ -23,7 +23,7 @@ más dinámica.
 
 /*
 Hemos definido una función, checkInventory, que recibe un elemento escaneado como argumento. 
-Devuelve el valor actual de la scannedItemclave en el foodsobjeto. 
+Devuelve el valor actual de la scannedItem clave en el foods objeto. 
 Puede suponer que solo se proporcionarán claves válidas como argumento para checkInventory.
 
 let foods = {
@@ -54,8 +54,7 @@ let foods = {
 };
 
 function checkInventory(scannedItem) {
-  // Only change code below this line
-  // Only change code above this line
+  return foods[scannedItem];
 }
 
 console.log(checkInventory("apples"));

@@ -4,8 +4,10 @@ Crea un objeto básico de JavaScript
 Piensa en cosas que la gente ve todos los días, como coches, tiendas y aves. 
 Todos estos son objetos: cosas tangibles con las que la gente puede observar e interactuar.
 
-¿Cuáles son algunas de las cualidades de estos objetos? Un coche tiene ruedas. 
-Las tiendas venden artículos. Las aves tienen alas.
+¿Cuáles son algunas de las cualidades de estos objetos? 
+Un coche tiene ruedas. 
+Las tiendas venden artículos. 
+Las aves tienen alas.
 
 Estas cualidades, o propiedades, definen los que constituye un objeto. 
 Ten en cuenta que objetos similares comparten las mismas propiedades, 
@@ -26,11 +28,15 @@ let duck = {
 El objeto duck tiene dos pares propiedad/valor: un name (nombre) de Aflac y un numLegs (número de patas) de 2.
 -----------------------------------------------------------------------------------------------------------
 Crea un objeto dog con las propiedades name y numLegs y asígnales una cadena y un número, respectivamente.
+
+let dog = {
+
+};
 */
 
 let dog = {
-    name: "lucas",
-    numLegs: 4
-}
+  name: "lucas",
+  numLegs: 4,
+};
 
-console.log(dog)
+console.log(dog); // { name: 'lucas', numLegs: 4 }

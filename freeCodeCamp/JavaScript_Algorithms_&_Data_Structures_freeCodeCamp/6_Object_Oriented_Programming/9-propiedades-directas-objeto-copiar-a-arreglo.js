@@ -11,7 +11,8 @@ function Bird(name) {
 let duck = new Bird("Donald");
 let canary = new Bird("Tweety");
 
-name y numLegs se llaman propiedades directas, porque están definidas directamente en la instancia del objeto. 
+name y numLegs se llaman propiedades directas, porque están definidas directamente 
+en la instancia del objeto. 
 Eso significa que duck y canary tienen su propia copia separada de estas propiedades. 
 De hecho, cada instancia de Bird tendrá su propia copia de estas propiedades. 
 El siguiente código añade todas las propiedades directas de duck al arreglo ownProps:
@@ -25,23 +26,34 @@ for (let property in duck) {
 }
 
 console.log(ownProps);
+
 La consola mostrará el valor ["name", "numLegs"].
 ------------------------------------------------------------------------------------------
 Agrega todas las propiedades directas de canary al arreglo ownProps.
-*/
 
 function Bird(name) {
-    this.name = name;
-    this.numLegs = 2;
+  this.name = name;
+  this.numLegs = 2;
 }
-  
+
 let canary = new Bird("Tweety");
 let ownProps = [];
 
+*/
+
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+
+let ownProps = [];
+
 for (let property in canary) {
-    if(canary.hasOwnProperty(property)) {
-      ownProps.push(property);
-    }
+  if (canary.hasOwnProperty(property)) {
+    ownProps.push(property);
   }
-  
-console.log(ownProps);  // ['name', 'numLegs']
+}
+
+console.log(ownProps); // ['name', 'numLegs']

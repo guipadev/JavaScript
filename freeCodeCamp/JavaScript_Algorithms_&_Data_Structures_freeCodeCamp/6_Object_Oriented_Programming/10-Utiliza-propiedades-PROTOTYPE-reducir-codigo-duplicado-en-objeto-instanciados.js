@@ -4,7 +4,9 @@ Utiliza propiedades "prototype" para reducir código duplicado
 Dado que numLegs probablemente tendrán el mismo valor para todas las instancias de Bird, 
 esencialmente tienes una variable duplicada numLegs dentro de cada instancia de Bird.
 
-Esto puede que no sea un problema cuando sólo hay dos instancias, pero imagina si hay millones de instancias. 
+Esto puede que no sea un problema cuando sólo hay dos instancias, 
+pero imagina si hay millones de instancias. 
+
 Eso sería un montón de variables duplicadas.
 
 Una mejor forma es utilizar el prototype de Bird. 
@@ -20,20 +22,26 @@ console.log(canary.numLegs);
 
 Dado que todas las instancias tienen automáticamente las propiedades en el prototype, 
 piensa en prototype como una "receta" para crear objetos. 
-Ten en cuenta que el prototype de duck y canary es parte del constructor Bird como Bird.prototype. 
-Casi todos los objetos en JavaScript tienen una propiedad prototype que es parte de la 
-función constructora que lo creó.
+
+prototype de duck y canary es parte del constructor Bird como Bird.prototype. 
+Casi todos los objetos en JavaScript tienen una propiedad prototype que es parte 
+de la función constructora que lo creó.
 ----------------------------------------------------------------------------------------
 Añade una propiedad numLegs al prototype de Dog
-*/
 
 function Dog(name) {
-    this.name = name;
+  this.name = name;
 }
-  
-Dog.prototype.numLegs = 4
+
+let beagle = new Dog("Snoopy");
+*/
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
 
 let beagle = new Dog("Snoopy");
 
-console.log(beagle) // Dog { name:"Snoopy" }
-console.log(beagle.numLegs) // 4
+console.log(beagle); // Dog { name:"Snoopy" }
+console.log(beagle.numLegs); // 4

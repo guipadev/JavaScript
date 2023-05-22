@@ -1,9 +1,11 @@
 /*
 Usa herencia para que no te repitas
 
-Hay un principio en la programación llamado No te repitas (Don't Repeat Yourself "DRY"). 
+Hay un principio en la programación llamado No te repitas (Don't Repeat Yourself "DRY").
+
 La razón por la que el código repetido es un problema es porque cualquier tipo de cambio 
 requiere corregir código en múltiples lugares. 
+
 Esto suele significar más trabajo para los programadores y más espacio para errores.
 
 Observa en el siguiente ejemplo como el método describe es compartido por Bird y Dog:
@@ -23,7 +25,9 @@ Dog.prototype = {
 };
 
 El método describe se repite en dos lugares. 
-El código se puede editar para seguir el principio DRY creando un supertype (o padre) llamado Animal:
+
+El código se puede editar para seguir el principio DRY creando un supertype (o padre) 
+llamado Animal:
 
 function Animal() { };
 
@@ -44,31 +48,60 @@ Dog.prototype = {
   constructor: Dog
 };
 -----------------------------------------------------------------------------------------
-El método eat se repite tanto en Cat como Bear. Edita el código utilizando el principio DRY, 
-moviendo el método eat al supertype Animal.
+El método eat se repite tanto en Cat como Bear. Edita el código utilizando el principio 
+DRY, moviendo el método eat al supertype Animal.
+
+function Cat(name) {
+  this.name = name;
+}
+
+Cat.prototype = {
+  constructor: Cat,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Bear(name) {
+  this.name = name;
+}
+
+Bear.prototype = {
+  constructor: Bear,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+
+};
 */
 
 function Cat(name) {
-    this.name = name;
+  this.name = name;
 }
-  
+
 Cat.prototype = {
-    constructor: Cat
+  constructor: Cat,
 };
-  
+
 function Bear(name) {
-    this.name = name;
+  this.name = name;
 }
-  
+
 Bear.prototype = {
-    constructor: Bear
+  constructor: Bear,
 };
-  
-function Animal() { }
-  
+
+function Animal() {}
+
 Animal.prototype = {
-    constructor: Animal,
-    eat: function() {
-        console.log("nom nom nom");
-    }
+  constructor: Animal,
+  eat: function () {
+    console.log("nom nom nom");
+  },
 };

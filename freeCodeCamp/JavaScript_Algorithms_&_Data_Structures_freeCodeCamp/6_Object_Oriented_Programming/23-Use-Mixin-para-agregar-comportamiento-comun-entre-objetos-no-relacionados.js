@@ -14,6 +14,7 @@ let flyMixin = function(obj) {
     console.log("Flying, wooosh!");
   }
 };
+
 El flyMixin toma a cualquier objeto y le da el método fly.
 
 let bird = {
@@ -27,37 +28,54 @@ let plane = {
 };
 
 flyMixin(bird);
+
 flyMixin(plane);
-Aquí bird y plane son pasados a flyMixin el cual después asigna la función fly a cada objeto. 
+
+Aquí bird y plane son pasados a flyMixin el cual después asigna la función fly 
+a cada objeto. 
+
 Ahora bird y plane pueden volar:
 
 bird.fly();
+
 plane.fly();
+
 La consola mostraría la cadena Flying, wooosh! dos veces, una por cada llamada a .fly().
 
-Ten en cuenta cómo el mixin permite que el mismo método fly sea reutilizado por los objetos bird 
-y plane los cuales no están relacionados.
+Ten en cuenta cómo el mixin permite que el mismo método fly sea reutilizado por los 
+objetos bird y plane los cuales no están relacionados.
 -------------------------------------------------------------------------------------------------
 Crea un mixin llamado glideMixin que defina un método llamado glide. 
+
 Luego utiliza el glideMixin para dar a bird y boat la habilidad de planear.
+
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
 */
 
 let bird = {
-    name: "Donald",
-    numLegs: 2
+  name: "Donald",
+  numLegs: 2,
 };
-  
+
 let boat = {
-    name: "Warrior",
-    type: "race-boat"
+  name: "Warrior",
+  type: "race-boat",
 };
-  
-let glideMixin = function(obj) {
-    obj.glide = function() {
-        console.log("Gliding!");
-    };
+
+let glideMixin = function (obj) {
+  obj.glide = function () {
+    console.log("Gliding!");
+  };
 };
 
 glideMixin(bird);
-glideMixin(boat);
 
+glideMixin(boat);

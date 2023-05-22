@@ -1,16 +1,22 @@
 /*
-Sobrescribir métodos heredados
+Anular/Sobrescribir métodos heredados
 
-En lecciones anteriores, aprendiste que un objeto puede heredar su comportamiento (métodos) 
-de otro objeto al referenciar su prototype:
+En lecciones anteriores, aprendiste que un objeto puede heredar su comportamiento 
+(métodos) de otro objeto al referenciar su prototype:
 
 ChildObject.prototype = Object.create(ParentObject.prototype);
+
 Luego, el ChildObject recibió sus propios métodos al encadenarlos a su prototype:
 
 ChildObject.prototype.methodName = function() {...};
+
 Es posible sobreescribir un método heredado. 
-Se hace de la misma manera: agregando un método a ChildObject.prototype usando el mismo 
-nombre de método que el que se va a sobrescribir. 
+
+Se hace de la misma manera: 
+
+agregando un método a ChildObject.prototype usando el mismo nombre de método que 
+el que se va a sobrescribir. 
+
 Aquí hay un ejemplo de Bird sobrescribiendo el método eat() heredado de Animal:
 
 function Animal() { }
@@ -32,30 +38,39 @@ así es como JavaScript busca el método en la cadena prototype de duck:
 
 duck => ¿Está eat() definido aquí? No.
 Bird => ¿Está eat() definido aquí? => Sí. Ejecútala y detén la búsqueda.
-Animal => eat() también está definido, pero JavaScript dejó de buscar antes de llegar a este nivel.
+Animal => eat() también está definido, pero JavaScript dejó de buscar antes de 
+          llegar a este nivel.
 Object => JavaScript dejó de buscar antes de llegar a este nivel.
 ------------------------------------------------------------------------------------------------------
 Sobrescribe el método fly() para Penguin de manera que devuelva la cadena de texto Alas, 
 this is a flightless bird.
-*/
 
 function Bird() { }
 
-Bird.prototype.fly = function() { 
-    return "I am flying!"; 
-};
+Bird.prototype.fly = function() { return "I am flying!"; };
 
 function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+let penguin = new Penguin();
+console.log(penguin.fly());
+*/
+
+function Bird() {}
+
+Bird.prototype.fly = function () {
+  return "I am flying!";
+};
+
+function Penguin() {}
 
 Penguin.prototype = Object.create(Bird.prototype);
 Penguin.prototype.constructor = Penguin;
 
-
-Penguin.prototype.fly = function() {
-    return "Alas, this is a flightless bird.";
+Penguin.prototype.fly = function () {
+  return "Alas, this is a flightless bird.";
 };
-
-
 
 let penguin = new Penguin();
 console.log(penguin.fly()); // I am flying!

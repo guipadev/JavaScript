@@ -28,9 +28,9 @@ incrementada en uno.
 // La variable global
 var fixedValue = 4;
 
-function incrementer () {
+function incrementer() {
   // Cambia solo el código debajo de esta línea
-    return fixedValue + 1;
+  return fixedValue + 1;
 }
 
-console.log(incrementer())  //5
+console.log(incrementer()); //5

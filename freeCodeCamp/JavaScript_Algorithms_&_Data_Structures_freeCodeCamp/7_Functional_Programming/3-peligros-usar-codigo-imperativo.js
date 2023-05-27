@@ -140,5 +140,3 @@ var finalTabs = socialWindow
   .tabOpen() // Abre una nueva pestaña para memes de gatos
   .join(videoWindow.tabClose(2)) // Cierra la tercera pestaña en videoWindow y une
   .join(workWindow.tabClose(1).tabOpen());
-
-console.log(finalTabs.tabs);

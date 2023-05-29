@@ -9,22 +9,14 @@ No debes utilizar el método incorporado filter.
 Se puede acceder a la instancia Array en el método myFilter usando this.
 */
 
-// La variable global
-var s = [23, 65, 98, 5];
-
-Array.prototype.myFilter = function(callback) {
-    var newArray = [];
-    
-    for (let i = 0; i < this.length; i++) {
-      if (callback(this[i]) === true) {
-        newArray.push(this[i]);
-      }
+Array.prototype.myFilter = function (callback) {
+  const newArray = [];
+  // Only change code below this line
+  for (let i = 0; i < this.length; i++) {
+    if (Boolean(callback(this[i], i, this)) === true) {
+      newArray.push(this[i]);
     }
-    return newArray;
-  };
-
-var new_s = s.myFilter(function(item) {
-  return item % 2 === 1;
-});
-
-console.log(new_s)  // [23, 65, 5]
+  }
+  // Only change code above this line
+  return newArray;
+};

@@ -16,10 +16,16 @@ El método some devolverá true.
 --------------------------------------------------------------------------------------------------------------
 Utiliza el método some dentro de la función checkPositive para comprobar si algún elemento en arr es positivo. 
 La función debe devolver un valor booleano.
+
+function checkPositive(arr) {
+  // Only change code above this line
+}
+
+checkPositive([1, 2, 3, -4, 5]);
 */
 
 function checkPositive(arr) {
-    return arr.some(element => element > 0)
+  return arr.some((element) => element > 0);
 }
 
-console.log(checkPositive([1, 2, 3, -4, 5]))    // true
+console.log(checkPositive([1, 2, 3, -4, 5])); // true

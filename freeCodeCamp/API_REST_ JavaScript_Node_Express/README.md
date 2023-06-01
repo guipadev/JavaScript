@@ -23,6 +23,9 @@ No usamos una base de datos real, estamos usando un archivo JSON local que imita
 
 ```npm i express```
 
+```npm i body-parser```
+
+```npm i uuid```
 
 ### Activa el servidor de desarrollo
 ```npm run dev```

@@ -26,3 +26,11 @@ No usamos una base de datos real, estamos usando un archivo JSON local que imita
 
 ### Activa el servidor de desarrollo
 ```npm run dev```
+
+### End points
+
+GET /api/v1/workouts/:workoutId 
+
+localhost:3000/api/v1/workouts/2342
+
+localhost:3000/api/v1/workouts

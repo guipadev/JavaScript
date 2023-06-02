@@ -20,6 +20,20 @@ También pasaremos cadenas con símbolos especiales, como
 2A3*3a2, 2A3 3a2 y 2_A3*3#A2.
 */
 
+/**
+ * Convierte la cadena a minúsculas usando el método toLowerCase().
+ * Elimina todos los caracteres no alfanuméricos utilizando la función replace()
+ * con una expresión regular /[^a-z0-9]/g.
+ * Esto reemplazará todos los caracteres que no sean letras minúsculas (de 'a' a 'z')
+ * y números (de '0' a '9') por una cadena vacía.
+ * Luego, la cadena resultante solo contiene letras minúsculas y números.
+ * Divide la cadena en un array de caracteres usando split('').
+ * Invierte el orden de los caracteres en el array utilizando reverse().
+ * Une los caracteres del array invertido en una cadena nuevamente utilizando join('').
+ * Compara la cadena original sin caracteres no alfanuméricos con la cadena invertida.
+ * Si son idénticas, la función devuelve true, lo que indica que la cadena es un palíndromo.
+ * De lo contrario, devuelve false.
+ */
 function palindrome(str) {
   // Eliminar caracteres no alfanuméricos y convertir a minúsculas
   const alphanumericStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");

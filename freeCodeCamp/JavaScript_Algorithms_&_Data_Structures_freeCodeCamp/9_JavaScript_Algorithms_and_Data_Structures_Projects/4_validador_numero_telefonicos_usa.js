@@ -33,7 +33,8 @@ Devuelve true si la cadena es un número de teléfono estadounidense valido; de 
  * (\(\d{3}\)|\d{3}) verifica si el código de área está presente en uno de los dos formatos: (555) o 555.
  * [-\s]? permite un guión o espacio opcional después del código de área.
  * \d{3} verifica si hay tres dígitos después del código de área.
- * [-\s]? permite un guión
+ * [-\s]? permite un guión o espacio opcional después de los primeros tres dígitos.
+ * \d{4} verifica si hay cuatro dígitos al final del número de teléfono.
  */
 function telephoneCheck(str) {
   // Expresión regular para validar el número de teléfono

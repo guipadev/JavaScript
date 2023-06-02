@@ -27,6 +27,15 @@ function convertToRoman(num) {
 convertToRoman(36);
 */
 
+/**
+ * La función convertToRoman utiliza un array romanNumerals que contiene objetos con la estructura
+ * { value: <valor arábigo>, numeral: <numeral romano> }.
+ * Estos objetos representan los valores y símbolos de los números romanos.
+ *
+ * La función itera sobre los objetos en romanNumerals en orden descendente y, en cada iteración,
+ * compara el número arábigo num con el valor del numeral romano actual.
+ * Si num es mayor o igual, agrega el numeral romano correspondiente al resultado y resta el valor del numeral a num.
+ */
 function convertToRoman(num) {
   const romanNumerals = [
     { value: 1000, numeral: "M" },

@@ -1,8 +1,19 @@
 const workoutService = require("../services/workoutService");
 
+/**
+ * Estamos extrayendo "modo" del objeto req.query y definiendo un parámetro de workoutService.getAllWorkouts.
+ * Este será un objeto que consiste en nuestros parámetros de filtro.
+ *
+ * Estoy usando la sintaxis abreviada aquí, para crear una nueva clave llamada "modo" dentro del objeto
+ * con el valor de lo que sea que esté en "req.query.mode".
+ * Esto podría ser un valor verdadero o indefinido si no hay un parámetro de consulta llamado "modo".
+ * Podemos extender este objeto a más parámetros de filtro que nos gustaría aceptar.
+ */
 const getAllWorkouts = (req, res) => {
+  const { mode } = req.query;
+
   try {
-    const allWorkouts = workoutService.getAllWorkouts();
+    const allWorkouts = workoutService.getAllWorkouts({ mode });
     res.send({ status: "OK", data: allWorkouts });
   } catch (error) {
     res

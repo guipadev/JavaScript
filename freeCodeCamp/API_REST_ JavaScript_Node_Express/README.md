@@ -27,8 +27,18 @@ No usamos una base de datos real, estamos usando un archivo JSON local que imita
 
 ```npm i uuid```
 
+Asegurarse de que los datos dentro del caché estén siempre actualizados.
+```npm i apicache```
+
+Documentar API
+```npm i swagger-jsdoc swagger-ui-express```
+
+
 ### Activa el servidor de desarrollo
 ```npm run dev```
+
+### Visite nuestra página para conocer la API documentada 
+```localhost:3000/api/v1/docs```
 
 ### End points
 
@@ -62,6 +72,9 @@ localhost: 3000/api/v1/workouts
   ]
 }
 
+GET - recibirá todos los entrenamientos "AMRAP" que están almacenados
+localhost:3000/api/v1/workouts?mode=amrap  
+
 ### Agrupe los recursos asociados juntos (anidamiento lógico)
 Cuando está diseñando su API, puede haber casos en los que tenga recursos asociados con otros. 
 Es una buena práctica agruparlos en un punto final y anidarlos correctamente.
@@ -85,3 +98,21 @@ El URI para ese extremo será /api/v1/workouts/:workoutId/records.
 
 Esta es una buena práctica para permitir el anidamiento lógico de URL. 
 La URL en sí no necesariamente tiene que reflejar la estructura de la base de datos.
+
+
+### Algunas características que posiblemente podríamos implementar:
+
+- Recibe todos los entrenamientos que requieren una barra: 
+/api/v1/workouts?equipment=barbell
+
+- Obtenga solo 5 entrenamientos: 
+/api/v1/workouts?length=5
+
+- Al usar la paginación, recibe la segunda página: 
+/api/v1/workouts?page=2
+
+- Ordene los entrenamientos en la respuesta en orden descendente por su fecha de creación: 
+/api/v1/workouts?sort=-createdAt
+
+- También puede combinar los parámetros para obtener los últimos 10 entrenamientos actualizados, por ejemplo: 
+/api/v1/workouts?sort=-updatedAt&length=10

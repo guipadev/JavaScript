@@ -1,23 +1,22 @@
-/**
-Aceptar y responder con datos en formato JSON
-
-Al interactuar con una API, siempre envía datos específicos con su solicitud o recibe datos con la respuesta. 
-
-Debido a su estandarización, las API deben aceptar y responder con datos en formato JSON.
-
-Creamos nuestra capa de servicio.
- */
 const { v4: uuid } = require("uuid");
 const Workout = require("../database/Workout");
 
 const getAllWorkouts = () => {
-  const allWorkouts = Workout.getAllWorkouts();
-  return allWorkouts;
+  try {
+    const allWorkouts = Workout.getAllWorkouts();
+    return allWorkouts;
+  } catch (error) {
+    throw error;
+  }
 };
 
 const getOneWorkout = (workoutId) => {
-  const workout = Workout.getOneWorkout(workoutId);
-  return workout;
+  try {
+    const workout = Workout.getOneWorkout(workoutId);
+    return workout;
+  } catch (error) {
+    throw error;
+  }
 };
 
 const createNewWorkout = (newWorkout) => {
@@ -27,18 +26,29 @@ const createNewWorkout = (newWorkout) => {
     createdAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
     updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
   };
-
-  const createdWorkout = Workout.createNewWorkout(workoutToInsert);
-  return createdWorkout;
+  try {
+    const createdWorkout = Workout.createNewWorkout(workoutToInsert);
+    return createdWorkout;
+  } catch (error) {
+    throw error;
+  }
 };
 
 const updateOneWorkout = (workoutId, changes) => {
-  const updatedWorkout = Workout.updateOneWorkout(workoutId, changes);
-  return updatedWorkout;
+  try {
+    const updatedWorkout = Workout.updateOneWorkout(workoutId, changes);
+    return updatedWorkout;
+  } catch (error) {
+    throw error;
+  }
 };
 
 const deleteOneWorkout = (workoutId) => {
-  Workout.deleteOneWorkout(workoutId);
+  try {
+    Workout.deleteOneWorkout(workoutId);
+  } catch (error) {
+    throw error;
+  }
 };
 
 module.exports = {

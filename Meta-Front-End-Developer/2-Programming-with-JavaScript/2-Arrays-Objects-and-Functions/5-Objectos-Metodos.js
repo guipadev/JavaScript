@@ -89,19 +89,32 @@ car.lightsOn(); // The lights are on.
 /**
 Ok, ahora he agregado cuatro propiedades a mi objeto. Y dos de ellos son métodos.
 
-Ya me aseguré de obtener el  kilometraje  y  el color correctos  del objeto de mi  automóvil  . Ahora, intentaré ejecutar los  métodos turnTheKey  y  lightsOn  .
+Ya me aseguré de obtener el  kilometraje  y  el color correctos  del objeto de mi  automóvil. 
+Ahora, intentaré ejecutar los  métodos turnTheKey  y  lightsOn  .
 
 Primero, invocaré el  método turnTheKey  .
 
-Recuerde que solo se puede acceder a este método a través del  objeto del automóvil  , por lo que primero debo escribir el nombre del objeto que contiene el  método turnTheKey  . En otras palabras, necesito escribir la palabra  car , seguida de un punto y luego el nombre de mi método, que es  turnTheKey .
+Recuerde que solo se puede acceder a este método a través del  objeto del automóvil, 
+por lo que primero debo escribir el nombre del objeto que contiene el  método turnTheKey. 
+En otras palabras, necesito escribir la palabra  car , seguida de un punto y luego el nombre de mi método, 
+que es  turnTheKey .
 
-Recuerde que esta propiedad es un método. Entonces, para ejecutarlo, necesito agregar un paréntesis de apertura y cierre para que el motor JavaScript pueda procesar mi código JavaScript.
+Recuerde que esta propiedad es un método. 
+Entonces, para ejecutarlo, necesito agregar un paréntesis de apertura y cierre para que el motor 
+JavaScript pueda procesar mi código JavaScript.
 
 Tenga en cuenta que esto da como resultado la  cadena "El motor está funcionando"  registrada en la consola.
 
-Ahora voy a probar el otro método. Una vez más, necesito acceder a él a través del  objeto car  , así que escribo  car.lightsOn y, nuevamente, necesito agregar esos paréntesis para invocar el  método lightsOn  . Presiono la tecla ENTER y noto que el texto se muestra en la consola.
+Ahora voy a probar el otro método. 
+Una vez más, necesito acceder a él a través del  objeto car, así que escribo  car.lightsOn y, 
+nuevamente, necesito agregar esos paréntesis para invocar el  método lightsOn. 
+Presiono la tecla ENTER y noto que el texto se muestra en la consola.
 
-¡Éxito! Es importante recordar que cuando el motor de JavaScript ejecuta esta línea de código, ubica el  objeto del automóvil  en su memoria. Luego, encuentra el  método lightsOn  en el  objeto del automóvil  . Lee la declaración de función que está guardada en esta propiedad y la ejecuta, línea por línea.
+¡Éxito! Es importante recordar que cuando el motor de JavaScript ejecuta esta línea de código, 
+ubica el  objeto del automóvil  en su memoria. 
+Luego, encuentra el  método lightsOn  en el  objeto del automóvil. 
+Lee la declaración de función que está guardada en esta propiedad y la ejecuta, línea por línea.
 
-Dado que solo hay una línea de código, el motor de JavaScript registra la cadena  "Las luces están encendidas"  en la consola.
+Dado que solo hay una línea de código, el motor de JavaScript registra la cadena  "Las luces están encendidas"  
+en la consola.
   */

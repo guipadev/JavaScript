@@ -9,7 +9,7 @@ const validateUser = ({ name, age, email } = {}) => {
   throw new ConnectionError('database is not available')
 };
 
-// Nos indica el error, pero no de que
+// Nos indica el error, pero no de que 
 /*
 try {
   validateUser();
@@ -18,13 +18,22 @@ try {
 }
 */
 
+// Llamar a la base de datos para guardar el usuario
+try {
+  mongodb.connect();
+} catch (e) {
+  // enviar traza original a un servicio NUESTRO o lo que sea, nunca al usuario
+  // sendBeaconError(e)
+  throw new ConnectionError("database is not available");
+}
+
 // Una forma adecuada del uso de los errores
 const validateUser = ({ name, age, email } = {}) => {
   if (!name) throw new ValidationError("name is required");
   if (!age) throw new ValidationError("age is required");
   if (!email) throw new ValidationError("email is required");
 
-  // Llamar al aBD para guardar el usuario
+  // Llamar a la BD para guardar el usuario
   throw new ConnectionError("database is not available");
 };
 
@@ -57,6 +66,10 @@ try {
     setTimeout(() => {
       validateUser({ name, age, email });
     });
+  }
+
+  if (e.name === "ValidationError") {
+    // showUIModalValidation()
   }
 }
 

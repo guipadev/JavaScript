@@ -217,3 +217,234 @@ que existen en el   prototipo  Train , es decir, los  métodos toggleLights() , 
 
 Ahora agreguemos otro método que será específico para la  clase HighSpeedTrain  : el  método toggleHighSpeed()  .
 */
+
+class HighSpeedTrain extends Train {
+    constructor(passengers, highSpeedOn, color, lightsOn) {
+        super(color, lightsOn);
+        this.passengers = passengers;
+        this.highSpeedOn = highSpeedOn;
+    }
+    toggleHighSpeed() {
+        this.highSpeedOn = !this.highSpeedOn;
+        console.log('High speed status:', this.highSpeedOn);
+    }
+}
+
+/*
+Además, imagina que te diste cuenta de que no te gusta cómo funciona el  método toggleLights() de la superclase 
+y quieres implementarlo de manera un poco diferente en la subclase. 
+Puede agregarlo dentro de la  clase HighSpeedTrain  .
+*/
+
+class HighSpeedTrain extends Train {
+    constructor(passengers, highSpeedOn, color, lightsOn) {
+        super(color, lightsOn);
+        this.passengers = passengers;
+        this.highSpeedOn = highSpeedOn;
+    }
+    toggleHighSpeed() {
+        this.highSpeedOn = !this.highSpeedOn;
+        console.log('High speed status:', this.highSpeedOn);
+    }
+    toggleLights() {
+        super.toggleLigths();
+        super.lightsStatus();
+        console.log('Lights are 100% operational.');
+    }
+}
+
+/*
+Entonces, ¿cómo anulaste el comportamiento del  método toggleLights() original  ?
+
+Bueno, en la superclase, el  método toggleLights()  se definió de la siguiente manera:
+*/
+
+toggleLights() {
+    this.lightsOn = !this.lightsOn;
+}
+
+/*
+Se dio cuenta de que el  método HighSpeedTrain  debería reutilizar el comportamiento existente del  
+método toggleLights() original  , por lo que usó la  sintaxis super.toggleLights()  
+para heredar el método completo de la superclase.
+
+A continuación, también hereda el comportamiento del método lightsStatus() de la superclase   , 
+porque se da cuenta de que desea tener el estado actualizado de la  propiedad lightsOn 
+registrada en la consola, siempre que invoque el  método toggleLights()  en la sub- clase.
+
+Finalmente, también agrega la tercera línea en el método toggleLights() reimplementado, a saber:
+*/
+
+console.log('Lights are 100% operational.');
+
+/*
+Ha agregado esta tercera línea para mostrar que puedo combinar el código de método "prestado" de la superclase 
+con su propio código personalizado en la subclase.
+
+Ahora estás listo para construir algunos objetos de tren.
+*/
+
+var train5 = new Train('blue', false);
+var highSpeed1 = new HighSpeedTrain(200, false, 'green', false);
+
+/*
+Construyó el   objeto  train5 de la clase Train  y estableció su  color  en  "blue"  y su  lightsOn  en  false .
+
+A continuación, creó el  objeto highSpeed1  para la  clase HighSpeedTrain  , configurando  los pasajeros  en  200 , 
+ highSpeedOn  en  false ,  color  en  "green" y lightsOn en false.
+
+Ahora puedes probar el comportamiento de  train5 llamando, por ejemplo, al  método toggleLights() 
+ y luego al   método lightsStatus() :
+*/
+train5.toggleLights(); // undefined
+train5.lightsStatus(); // Lights on? true
+
+
+// Aquí está el código completo completo para esta lección:
+class Train {
+    constructor(color, lightsOn) {
+        this.color = color;
+        this.lightsOn = lightsOn;
+    }
+    toggleLights() {
+        this.lightsOn = !this.lightsOn;
+    }
+    lightsStatus() {
+        console.log('Lights on?', this.lightsOn);
+    }
+    getSelf() {
+        console.log(this);
+    }
+    getPrototype() {
+        var proto = Object.getPrototypeOf(this);
+        console.log(proto);
+    }
+}
+
+class HighSpeedTrain extends Train {
+    constructor(passengers, highSpeedOn, color, lightsOn) {
+        super(color, lightsOn);
+        this.passengers = passengers;
+        this.highSpeedOn = highSpeedOn;
+    }
+    toggleHighSpeed() {
+        this.highSpeedOn = !this.highSpeedOn;
+        console.log('High speed status:', this.highSpeedOn);
+    }
+    toggleLights() {
+        super.toggleLights();
+        super.lightsStatus();
+        console.log('Lights are 100% operational.');
+    }
+}
+
+var myFirstTrain = new Train('red', false);
+console.log(myFirstTrain); // Train {color: 'red', lightsOn: false}
+var mySecondTrain = new Train('blue', false);
+var myThirdTrain = new Train('blue', false);
+
+var train4 = new Train('red', false);
+train4.toggleLights(); // undefined
+train4.lightsStatus(); // Lights on? true
+train4.getSelf(); // Train {color: 'red', lightsOn: true}
+train4.getPrototype(); // {constructor: f, toggleLights: f, ligthsStatus: f, getSelf: f, getPrototype: f}
+
+var train5 = new Train('blue', false);
+var highSpeed1 = new HighSpeedTrain(200, false, 'green', false);
+
+train5.toggleLights(); // undefined
+train5.lightsStatus(); // Lights on? true
+highSpeed1.toggleLights(); // Lights on? true, Lights are 100% operational.
+
+/*
+Observe cómo el  método toggleLights()  se comporta de manera diferente en la  clase HighSpeedTrain  
+que en la  clase Train  .
+
+Además, ayuda a visualizar lo que está sucediendo al obtener el prototipo de los  trenes train5 
+ y  highSpeed1 :
+*/
+
+train5.getPrototype(); // {constructor: ƒ, toggleLights: ƒ, lightsStatus: ƒ, getSelf: ƒ, getPrototype: ƒ}
+highSpeed1.getPrototype(); // Train {constructor: ƒ, toggleHighSpeed: ƒ, toggleLights: ƒ}
+
+/*
+Los valores devueltos en este caso inicialmente pueden parecer un poco difíciles de comprender, pero en realidad, 
+es bastante simple:
+
+El objeto prototipo del  objeto tren5  se creó cuando definió la clase  Tren . 
+Puede acceder al prototipo utilizando  la sintaxis Train.prototype  y recuperar el objeto prototipo.
+
+El objeto prototipo del  objeto highSpeed1  es este objeto: {constructor: ƒ, toggleHighSpeed: ƒ, toggleLights: ƒ} . 
+A su vez este objeto tiene su propio prototipo, el cual se puede encontrar usando la siguiente sintaxis:  
+HighSpeedTrain.prototype.__proto__ . 
+Ejecutar este código devuelve:  
+{constructor: ƒ, toggleLights: ƒ, lightsStatus: ƒ, getSelf: ƒ, getPrototype: ƒ} .
+
+Los prototipos parecen fáciles de entender en cierto nivel, pero es fácil perderse en la complejidad. 
+Esta es una de las razones por las que la sintaxis de clases en JavaScript mejora su experiencia de desarrollador, 
+al facilitar el razonamiento sobre las relaciones entre clases. Sin embargo, a medida que mejora sus habilidades, 
+siempre debe esforzarse por comprender mejor sus herramientas, y esto incluye prototipos. 
+Después de todo, JavaScript es solo una herramienta, y ahora has "mirado detrás de la cortina".
+
+En esta lectura, ha aprendido la esencia misma de cómo funciona la programación orientada a objetos con clases en JavaScript. 
+Sin embargo, esto no es todo.
+
+En la lección sobre el diseño de un programa orientado a objetos, aprenderá algunos conceptos más útiles. 
+Estos tienen que ver principalmente con la codificación de sus clases para que sea aún más fácil crear 
+instancias de objetos de esas clases en JavaScript.
+
+Usando la instancia de clase como propiedad del constructor de otra clase
+
+Considere el siguiente ejemplo:
+*/
+
+class StationaryBike {
+    constructor(position, gears) {
+        this.position = position
+        this.gears = gears
+    }
+}
+
+class Treadmill {
+    constructor(position, modes) {
+        this.position = position
+        this.modes = modes
+    }
+}
+
+class Gym {
+    constructor(openHrs, stationaryBikePos, treadmillPos) {
+        this.openHrs = openHrs
+        this.stationaryBike = new StationaryBike(stationaryBikePos, 8)
+        this.treadmill = new Treadmill(treadmillPos, 5)
+    }
+}
+
+var boxingGym = new Gym("7-22", "right corner", "left corner")
+
+console.log(boxingGym.openHrs) //
+console.log(boxingGym.stationaryBike) //
+console.log(boxingGym.treadmill) //
+
+/*
+En este ejemplo, hay tres clases definidas: StationaryBike , Treadmill y Gym .
+
+La clase StationaryBike está codificada para que su futura instancia de objeto tenga las propiedades de posición y engranajes . 
+La propiedad de posición describe dónde se colocará la bicicleta estática dentro del gimnasio, y la propiedad de engranajes 
+indica la cantidad de engranajes que debe tener esa bicicleta estática.
+
+La clase Treadmill también tiene una posición y otra propiedad, modos denominados (como en "modos de ejercicio").
+
+La clase Gym tiene tres parámetros en su función constructora: openHrs , stationaryBikePos , trackmillPos .
+
+Este código me permite instanciar un nuevo objeto de instancia de la clase Gym y luego, cuando lo inspecciono,
+ obtengo la siguiente información:
+
+la propiedad openHrs es igual a "7-22" (es decir, de 7 a. m. a 10 p. m.)
+
+la propiedad stationaryBike es un objeto del tipo StationaryBike , que contiene dos propiedades: position y gears
+
+la propiedad Treadmill es un objeto del tipo Treadmill , que contiene dos propiedades: posición y modos
+
+
+*/

@@ -1,0 +1,7 @@
+Testing sofware
+
+e2e
+
+Integration
+
+Unit

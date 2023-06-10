@@ -1,0 +1,26 @@
+1. ¿Cuál es la forma correcta de exportar la función timesTwo como un módulo para que Jest pueda usarla en archivos de prueba?
+module.exports = timesTwo
+
+2. La prueba es una forma de verificar las expectativas que tiene con respecto al comportamiento de su código.
+True
+
+3. Node.js se puede usar para crear varios tipos de aplicaciones. Seleccione todas las que correspondan.
+Aplicaciones de línea de comandos
+Back-end de aplicaciones web
+Aplicaciones de escritorio
+
+4. Cuando se ejecute la siguiente prueba, ¿cuál será el resultado de la prueba?
+
+function add(a, b) {
+    return a + b;
+}
+
+expect(add(10, 5)).toBe(16);
+
+Fail
+
+5. ¿Cuál de las siguientes es la forma de prueba más lenta y costosa?
+Pruebas de extremo a extremo (e2e)
+
+6. La simulación le permite separar el código que está probando de sus dependencias relacionadas.
+verdadero

@@ -1,0 +1,33 @@
+1. ¿Qué es la prueba unitaria?
+- Las pruebas unitarias giran en torno a la idea de tener pequeños fragmentos de código separados que sean fáciles de probar.
+
+2. Cuando se ejecute la siguiente prueba, ¿cuál será el resultado de la prueba?
+
+function restar(a, b) { return a - b; } esperar(restar(10, 4)).toBe(6);
+
+Éxito.
+
+3. Verdadero o falso: las pruebas de extremo a extremo son el tipo de prueba más lento y costoso.
+Verdadero
+
+4. ¿Qué motivo le gustaría saber acerca de la cobertura de su código?
+Le permite saber dónde se pueden requerir más pruebas.
+
+5.¿ Node.js se usa normalmente para hacer cuál de las siguientes?
+Construir backends de aplicaciones web
+
+6. ¿Cómo se define la prueba de integración?
+Probar cómo las partes de su sistema interactúan con otras partes de su sistema.
+
+7. ¿Qué comando se usa para instalar un paquete de Node?
+npm
+
+
+8. Verdadero o falso: si ha creado un proyecto con diferentes paquetes de nodos, todos aparecerán en el archivo package.json .
+falso
+
+9. Verdadero o falso: las pruebas de extremo a extremo se pueden realizar en un navegador web sin escribir código.
+FALSO
+
+10. ¿En Jest usas la burla empleando cuál de los siguientes?
+Jest Mock functions

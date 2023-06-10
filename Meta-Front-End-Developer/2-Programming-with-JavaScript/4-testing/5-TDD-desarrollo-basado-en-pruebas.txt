@@ -1,0 +1,71 @@
+Cada pieza de software se construye de acuerdo con los requisitos formales o informales.
+El propósito de los requisitos es explicar,en lenguaje humano las complejidades de lo que hace la pieza de software.
+Entonces, ¿cómo se relacionaron los requisitos con la práctica del desarrollo basado en pruebas?
+Permítanme explicar el desarrollo basado en pruebas.RTDD para abreviar es un proceso simplificado de escribir código 
+que satisfacer algunos requisitos.
+
+Analicemos un poco este proceso a un alto nivel.
+El trabajo de un equipo de desarrollo de software consta de los siguientes requisitos de recepciónque se convertirá 
+en una característica de la aplicación que se está desarrollando.
+Escribiendo una prueba fallida para que se construya la función antes de que se construya.
+Hacer que esta prueba fallida pase codificando esa característica dada en comparacióncon el proceso de desarrollo tradicional,
+ese enfoque TDD puede parecer algo al revés.
+Ahora voy a demostrar el enfoque TDD escribiendo una prueba fallida paraun archivo javascript yluego escribir código para 
+hacer que esta prueba pase para entender cómo funciona TDD.
+Considere la siguiente situación de la vida real.Supongamos que tiene que realizar una tarea, conducir su automóvil al trabajo.
+Sales de tu casa y caminas hacia tu auto,solo para descubrir que no tiene las llaves de su auto con usted.
+Entonces recuerdas que dejaste las llaves de tu auto en el gabinete ysimplemente olvidaste llevarles lo que hiciste allí.
+En este escenario imaginado es lo opuesto a TDD.Primero caminaste hacia tu coche y solo entonces comprobaste si tenías tu 
+cocheclaves si hizo estas cosas usando el enfoque TDD,usted haría lo siguiente primero.Verifica o prueba si tiene sus llaves 
+con usted.Su prueba falla porque no los tiene.
+Están en el gabinete.Luego realiza la acción de sacar las llaves del gabinete.Finalmente, verifica o prueba si tiene sus 
+llaves esta vez las tiene.
+Entonces su prueba ahora pasa.Lo que se describe aquí es la esencia de TDD.
+Repasemos estos pasos nuevamente esta vez,pretende que estás implementando TDD en tu código.
+
+Imagine que necesita escribir código de una manera basada en pruebas.Dado que codifica la forma TDD en la que primero escribe
+la prueba,incluso antes de que haya escrito una implementación real, porejemplo, prueba si existe una función llamada estado 
+de las teclas,luego usa algunas funciones de prueba de un marco de prueba.
+Dado que no ha escrito la implementación de su código fuente.La prueba falla.A continuación, ejecute su prueba.
+La prueba falla porque no hay estado de las claves.Función declarada.
+La lógica de su código de prueba es esperar que el estado de la función declaves existe en su código fuente.
+Declaras una función llamada estado de las claves.Ejecutas la prueba.
+De nuevo, comprueba si existe tal función y confirma que existe.
+Entonces la prueba pasa, es importante notar que una de las reglasde TDD es que debe escribir la menor cantidad de código 
+posible para que la prueba paseesta prueba para pasar, es suficiente declarar una función con el nombre a tu ladorecibir
+otro requisito que es el siguiente, excepto una variable de claves,que debe establecerse en verdadero y la consola registra
+la variable de claves.Entonces, el requisito establece que el estado de las teclas debe aceptar la funciónuna variable
+de claves previamente declarada, que debe establecerse en verdadero.
+Luego, el estado de las claves debe registrar en la consola el valor de la variable de claves.
+
+Así que escribe otra prueba que vuelve a fallar ya que aún tiene que escribirla implementación, la escribes y tu prueba 
+que antes fallaba ahora pasa.
+
+Finalmente, examina el código de su función ydarse cuenta de que la sangría es todo mal.
+También hay demasiados comentarios innecesarios.Así que limpias tu código yejecute la prueba nuevamente para confirmar 
+que no ha cometido ningún error accidentalmente.
+La prueba aún pasa, por lo que todo está bien.Ese es el enfoque TDD en
+pocas palabras, repasemos una vez más.En un escenario como miembro del equipo de desarrollo,su tarea es leer los 
+requisitos para el software que está escribiendo.Los requisitos te los pasa el jefe de proyecto.Entonces obtienes tu
+primera tarea del día y comienzas a codificar al estilo TDD.Primero lea el nuevo requisito.Luego, escribe una prueba fallida, 
+luego actualiza su código fuente.
+
+Entonces resuelve el requisito. Después de eso, ejecuta una prueba que pasa. Finalmente,usted vuelve a factorizar
+ su implementación.Este proceso se suele explicar en tres palabras.Rojo verde.Re factor, el rojo representa la prueba fallida.
+ Verde por otro lado,representa la prueba de aprobación después de realizar actualizaciones en el código fuente.
+
+El factor re representa los ajustes finales al código que no cambiadetalles de implementación, que siempre se pueden 
+confirmarejecutando otra prueba posterior cuando se implemente correctamente.TDD trae grandes beneficios a una organización
+ porque permiteLas pruebas automatizadas en cualquier plataforma, los proyectos crecen con el tiempo y se vuelven complejos.
+ Asegurarse de que todas las pruebas estén pasando es una fuerte señal de que el actualrequisito y todos los requisitos 
+ anteriores paraesta parte de su aplicación se entregó con éxito y nada se está rompiendo.El desarrollo basado en pruebas 
+ tiene muchas ventajas.Aquí hay algunos con TDD, está minimizando las regresiones que son accidentaleserrores introducidos
+  en el código antiguo al codificar un nuevo requisito y también tieneprueba de que su nueva implementación no está rompiendo
+   otras partes de la aplicación.
+
+Puede automatizar estas pruebas fácilmente y así seguir verificando una y otra vez.de nuevo que el sistema funciona 
+como se esperaba.
+
+Puede probar sus implementaciones con varias entradas y las pruebas se vuelvenun tipo específico de documentación para 
+los nuevos miembros de su equipo.En este video, aprendió cómo funciona el desarrollo basado en pruebas, rtdd,También 
+cubrió los pasos involucrados en el enfoque TDD yque se implementa en ciclos de re factor Rojo Verde

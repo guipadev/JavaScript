@@ -1,8 +1,6 @@
-# Manual de la API REST: cómo crear, probar, consumir y documentar las API REST
+# API REST: crear, probar, consumir y documentar las API REST
 
-Se cubrira la configuración básica y la arquitectura con Node y Express, las pruebas unitarias con Supertest, veremos cómo podemos consumir la API desde una aplicación front-end de React y finalmente documentaremos la API usando herramientas como Swagger.
-
-El objetivo descripción general de cómo funciona una API REST, cómo interactúan sus piezas y en qué podría consistir una implementación completa.
+Arquitectura con Node y Express, las pruebas unitarias con Supertest, consumir la API desde una aplicación front-end de React y documentada la API usando herramienta Swagger.
 
 ## ¿Qué es REST?
 La transferencia de estado representacional (REST) ​​es un estilo arquitectónico ampliamente utilizado para crear servicios web y API.
@@ -49,7 +47,7 @@ Las API REST son un estilo arquitectónico popular y ampliamente utilizado para 
 
 Si bien existen algunas limitaciones y preocupaciones con las API REST, siguen siendo una opción popular y efectiva para crear API en muchas industrias y sectores diferentes.
 
-## Construir una API REST con Node y Express
+## API REST con Node y Express
 
 ### Nuestras herramientas
 
